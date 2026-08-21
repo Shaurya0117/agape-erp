@@ -216,3 +216,17 @@ model User {
     canManageLogistics  Boolean @default(false)
     canManageUsers      Boolean @default(false)
 }
+
+
+
+model InventoryItem {
+  id          String   @id @default(cuid())
+  sku         String   @unique
+  name        String
+  category    String
+  quantity    Int      @default(0)
+  unit        String   @default("pcs")
+  location    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

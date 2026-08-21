@@ -19,7 +19,7 @@ import {
   TrendingUp,
   Ship,
   FileBadge,
-  Building2, ShieldAlert
+  Building2, ShieldAlert, Package
 } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -101,6 +101,10 @@ export default async function RootLayout({
               <Ship className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.logistics}</span>
             </Link>
+            <Link href="/inventory" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+              <Package className="w-5 h-5 text-slate-400 group-hover:text-emerald-400 transition-colors" />
+              <span className="font-medium">{dict.inventory}</span>
+            </Link>
             
             <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">{dict.administration}</p>
               <Link href="/users" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
@@ -153,5 +157,6 @@ export default async function RootLayout({
     </html>
   );
 }
+
 
 
