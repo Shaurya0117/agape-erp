@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. ACCOUNTING CORE
+
+model Account {
+  id              String      @id @default(cuid())
+  title           String
+  accountType     String      // ASSETS, EQUITY, LIABILITIES, EXPENSES, REVENUES, RESULT
+  active          Boolean     @default(true)
+  fullTitle       String?
+  gasCode         String?     // Greek Accounting Standards
+
+  debits          Debit[]
+  credits         Credit[]
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Article {
+  id              String      @id @default(cuid())
+  description     String
+  date            DateTime
+  balanceSheet    Boolean     @default(false)
+  
+  debits          Debit[]
+  credits         Credit[]
+  remittances     Remittance[]
+  vouchers        Voucher[]
+  
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Debit {
+  id              String      @id @default(cuid())
+  amount          Float
+  articleId       String
+  accountId       String
+
+  article         Article     @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  account         Account     @relation(fields: [accountId], references: [id])
+}
+
+model Credit {
+  id              String      @id @default(cuid())
+  amount          Float
+  articleId       String
+  accountId       String
+
+  article         Article     @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  account         Account     @relation(fields: [accountId], references: [id])
+}
+
+model FixedAsset {
+  id              String      @id @default(cuid())
+  description     String
+  quantity        Int         @default(1)
+  
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Voucher {
+  id              String      @id @default(cuid())
+  title           String
+  identifier      String      @unique
+  articleId       String?
+  article         Article?    @relation(fields: [articleId], references: [id])
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+// 2. CRM & DONOR MANAGEMENT
+
+model Contributor {
+  id              String      @id @default(cuid())
+  fullName        String
+  lastName        String?
+  firstName       String?
+  email           String?
+  taxId           String?
+  
+  donations       Donation[]
+  comments        Comment[]
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Donation {
+  id              String      @id @default(cuid())
+  title           String?
+  amount          Float
+  receiptNo       Int?
+  paymentDate     DateTime?
+  contributorId   String
+
+  contributor     Contributor @relation(fields: [contributorId], references: [id])
+  
+  createdAt       DateTime    @default(now())
+}
+
+model Campaign {
+  id              String      @id @default(cuid())
+  name            String
+  active          Boolean     @default(true)
+}
+
+model Comment {
+  id              String      @id @default(cuid())
+  text            String
+  contributorId   String
+
+  contributor     Contributor @relation(fields: [contributorId], references: [id], onDelete: Cascade)
+  createdAt       DateTime    @default(now())
+}
+
+model Baptism {
+  id              String      @id @default(cuid())
+  title           String
+  godchildName    String
+  registrationDate DateTime
+}
+
+// 3. PROJECTS & OPERATIONS
+
+model Project {
+  id              String      @id @default(cuid())
+  title           String
+  code            String?
+  projectTitle    String?
+  startDate       DateTime?
+  completionDate  DateTime?
+  workStage       String?
+  budget          Float?
+
+  remittances     Remittance[]
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Remittance {
+  id              String      @id @default(cuid())
+  title           String?
+  amount          Float
+  articleId       String?
+  projectId       String?
+
+  article         Article?    @relation(fields: [articleId], references: [id])
+  project         Project?    @relation(fields: [projectId], references: [id])
+}
+
+model Tier {
+  id              String      @id @default(cuid())
+  name            String
+  active          Boolean     @default(true)
+}
+
+model Container {
+  id              String      @id @default(cuid())
+  title           String
+  identifier      String      @unique
+  departureDate   DateTime?
+}
+
+// 4. ADMINISTRATION
+
+model BoardMinute {
+  id              String      @id @default(cuid())
+  date            DateTime
+  decisionNo      Int
+  topic           Int
+  summary         String
+}
+
+model DocumentProtocol {
+  id              String      @id @default(cuid())
+  title           String
+  date            DateTime
+  direction       String      @default("INCOMING") // INCOMING or OUTGOING
+}
+
+model DocumentClassification {
+  id              String      @id @default(cuid())
+  title           String
+  active          Boolean     @default(true)
+}
+
+model Rental {
+  id              String      @id @default(cuid())
+  title           String
+  rentAmount      Float
+  startDate       DateTime?
+  endDate         DateTime?
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+    isSuperAdmin        Boolean @default(false)
+    canManageFinancials Boolean @default(false)
+    canManageProjects   Boolean @default(false)
+    canManageLogistics  Boolean @default(false)
+    canManageUsers      Boolean @default(false)
+}
