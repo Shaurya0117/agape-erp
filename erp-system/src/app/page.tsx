@@ -11,7 +11,9 @@ export default async function DashboardPage() {
     totalContributors,
     recentArticles,
     accounts,
-    projects
+    projects,
+    allCredits,
+    allDebits
   ] = await Promise.all([
     prisma.donation.aggregate({ _sum: { amount: true } }),
     prisma.contributor.count(),
@@ -21,7 +23,9 @@ export default async function DashboardPage() {
       include: { debits: { include: { account: true } }, credits: { include: { account: true } } }
     }),
     prisma.account.findMany(),
-    prisma.project.findMany({ include: { remittances: true } })
+    prisma.project.findMany({ include: { remittances: true } }),
+    prisma.credit.findMany(),
+    prisma.debit.findMany()
   ]);
 
   // Calculate live financial totals for the top KPI cards
@@ -236,6 +240,7 @@ export default async function DashboardPage() {
     </div>
   );
 }
+
 
 
 
