@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createDonation } from "./actions";
 
@@ -130,5 +131,6 @@ export default async function DonationsPage() {
     </div>
   );
 }
+
 
 

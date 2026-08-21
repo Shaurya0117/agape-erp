@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createContributor } from "./actions";
 
@@ -137,5 +138,6 @@ export default async function ContributorsPage() {
     </div>
   );
 }
+
 
 

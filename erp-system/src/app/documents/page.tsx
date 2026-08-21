@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createVoucher, createProtocol } from "./actions";
 import { FileBadge, ScrollText, Plus, Hash, Link as LinkIcon, Download, Upload } from "lucide-react";
@@ -122,5 +123,6 @@ export default async function DocumentsPage() {
     </div>
   );
 }
+
 
 

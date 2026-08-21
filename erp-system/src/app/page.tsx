@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { DashboardCharts } from "@/components/DashboardCharts";
 import { LayoutDashboard, Wallet, TrendingUp, Users, ArrowUpRight, ArrowDownRight, Activity } from "lucide-react";
@@ -235,5 +236,6 @@ export default async function DashboardPage() {
     </div>
   );
 }
+
 
 

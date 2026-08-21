@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createContainer } from "./actions";
 import { Ship, Calendar, Tag, Package, Box } from "lucide-react";
@@ -101,5 +102,6 @@ export default async function LogisticsPage() {
     </div>
   );
 }
+
 
 

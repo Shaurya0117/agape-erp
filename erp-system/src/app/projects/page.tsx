@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createProject } from "./actions";
 import { Briefcase, Target, Euro, Calendar, Plus } from "lucide-react";
@@ -186,5 +187,6 @@ export default async function ProjectsPage({
     </div>
   );
 }
+
 
 

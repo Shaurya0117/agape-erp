@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createBaptism } from "./actions";
 
@@ -96,5 +97,6 @@ export default async function BaptismsPage() {
     </div>
   );
 }
+
 
 

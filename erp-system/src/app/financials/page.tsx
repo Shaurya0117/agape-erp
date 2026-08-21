@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { FileText, Calculator, TrendingUp, Landmark } from "lucide-react";
 import PdfExportButton from "@/components/PdfExportButton";
@@ -172,5 +173,6 @@ export default async function FinancialsPage() {
     </div>
   );
 }
+
 
 

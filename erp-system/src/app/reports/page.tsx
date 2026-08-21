@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { PieChart, AlertCircle, CheckCircle2 } from "lucide-react";
 
@@ -114,5 +115,6 @@ export default async function ReportsPage() {
     </div>
   );
 }
+
 
 

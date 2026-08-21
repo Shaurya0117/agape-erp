@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createArticle } from "./actions";
 import { ReceiptText, Calendar, Wallet, Banknote, ArrowRight, ArrowDownRight, ArrowUpRight, Plus, Download } from "lucide-react";
@@ -226,5 +227,6 @@ export default async function ArticlesPage({
     </div>
   );
 }
+
 
 

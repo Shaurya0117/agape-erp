@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createBoardMinute, createFixedAsset, createRental } from "./actions";
 import { Building, BookOpen, Key, Plus } from "lucide-react";
@@ -130,5 +131,6 @@ export default async function AdminPage() {
     </div>
   );
 }
+
 
 

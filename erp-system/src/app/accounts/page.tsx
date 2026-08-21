@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createAccount, deleteAccount } from "./actions";
 import { Building2, Plus, Wallet, Trash2, Hash } from "lucide-react";
@@ -151,5 +152,6 @@ export default async function AccountsPage() {
     </div>
   );
 }
+
 
 

@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createRemittance } from "./actions";
 
@@ -110,5 +111,6 @@ export default async function RemittancesPage() {
     </div>
   );
 }
+
 
 
