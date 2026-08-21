@@ -57,7 +57,7 @@ export default async function ArticlesPage({
               <h2 className="text-lg font-bold text-slate-900">New Transaction</h2>
             </div>
             
-            <form action={createArticle} className="p-6 space-y-5">
+            <form action={createArticle as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-slate-700">Description</label>
                 <div className="relative">
@@ -226,4 +226,5 @@ export default async function ArticlesPage({
     </div>
   );
 }
+
 

@@ -23,7 +23,7 @@ export default async function AccountsPage() {
               <h2 className="text-lg font-bold text-slate-900">Add New Account</h2>
             </div>
             
-            <form action={createAccount} className="p-6 space-y-5">
+            <form action={createAccount as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-slate-700">Account Title</label>
                 <div className="relative">
@@ -132,7 +132,7 @@ export default async function AccountsPage() {
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-right">
-                          <form action={deleteAccount}>
+                          <form action={deleteAccount as any}>
                             <input type="hidden" name="id" value={account.id} />
                             <button type="submit" className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-none transition-colors" title="Delete Account">
                               <Trash2 className="w-4 h-4" />
@@ -151,4 +151,5 @@ export default async function AccountsPage() {
     </div>
   );
 }
+
 

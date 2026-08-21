@@ -19,7 +19,7 @@ export default async function ContributorsPage() {
         {/* Left Column: Form */}
         <div className="lg:col-span-1 bg-white p-6 rounded-none shadow-sm border border-gray-200 h-fit">
           <h2 className="text-xl font-semibold mb-4">Add New Contributor</h2>
-          <form action={createContributor} className="space-y-4">
+          <form action={createContributor as any} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
               <input 
@@ -137,4 +137,5 @@ export default async function ContributorsPage() {
     </div>
   );
 }
+
 

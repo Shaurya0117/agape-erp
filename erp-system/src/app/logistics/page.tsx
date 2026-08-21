@@ -24,7 +24,7 @@ export default async function LogisticsPage() {
               <h2 className="text-lg font-bold text-slate-900">Add Container</h2>
             </div>
             
-            <form action={createContainer} className="p-6 space-y-5">
+            <form action={createContainer as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-slate-700">Container Content / Title</label>
                 <div className="relative">
@@ -101,4 +101,5 @@ export default async function LogisticsPage() {
     </div>
   );
 }
+
 

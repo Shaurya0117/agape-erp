@@ -15,7 +15,7 @@ export default async function BaptismsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 bg-white p-6 rounded-none shadow-sm border border-gray-200 h-fit">
           <h2 className="text-xl font-semibold mb-4">Record New Baptism</h2>
-          <form action={createBaptism} className="space-y-4">
+          <form action={createBaptism as any} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Title *</label>
               <input 
@@ -96,4 +96,5 @@ export default async function BaptismsPage() {
     </div>
   );
 }
+
 

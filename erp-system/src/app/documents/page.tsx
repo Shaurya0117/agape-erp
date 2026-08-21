@@ -28,7 +28,7 @@ export default async function DocumentsPage() {
               </div>
             </div>
             <div className="p-4">
-              <form action={createVoucher} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
+              <form action={createVoucher as any} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
                 <input type="text" name="title" required placeholder="Voucher Description" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <div className="flex gap-2">
                   <div className="relative w-1/2">
@@ -81,7 +81,7 @@ export default async function DocumentsPage() {
               <h2 className="text-lg font-bold text-slate-900">Official Protocols</h2>
             </div>
             <div className="p-4">
-              <form action={createProtocol} className="flex gap-2 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
+              <form action={createProtocol as any} className="flex gap-2 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
                 <select name="direction" className="px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white">
                   <option value="INCOMING">Incoming</option>
                   <option value="OUTGOING">Outgoing</option>
@@ -122,4 +122,5 @@ export default async function DocumentsPage() {
     </div>
   );
 }
+
 

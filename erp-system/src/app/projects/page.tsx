@@ -39,7 +39,7 @@ export default async function ProjectsPage({
               <Plus className="w-5 h-5 text-indigo-600" />
               <h2 className="text-lg font-bold text-slate-900">Create New Project</h2>
             </div>
-            <form action={createProject} className="p-6 space-y-5">
+            <form action={createProject as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-slate-700">Project Title</label>
                 <div className="relative">
@@ -186,4 +186,5 @@ export default async function ProjectsPage({
     </div>
   );
 }
+
 

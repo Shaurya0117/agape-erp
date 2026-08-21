@@ -26,7 +26,7 @@ export default async function AdminPage() {
               <h2 className="text-lg font-bold text-slate-900">Board Minutes</h2>
             </div>
             <div className="p-4">
-              <form action={createBoardMinute} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
+              <form action={createBoardMinute as any} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
                 <input type="text" name="summary" required placeholder="Decision Summary" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <div className="flex gap-2">
                   <input type="number" name="decisionNo" placeholder="Dec. #" className="w-1/3 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
@@ -63,7 +63,7 @@ export default async function AdminPage() {
               <h2 className="text-lg font-bold text-slate-900">Fixed Assets</h2>
             </div>
             <div className="p-4">
-              <form action={createFixedAsset} className="flex gap-2 mb-6">
+              <form action={createFixedAsset as any} className="flex gap-2 mb-6">
                 <input type="text" name="description" required placeholder="Asset Name" className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <input type="number" name="quantity" defaultValue={1} className="w-20 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <button type="submit" className="bg-slate-800 text-white p-2 rounded-none hover:bg-slate-700 transition">
@@ -95,7 +95,7 @@ export default async function AdminPage() {
               <h2 className="text-lg font-bold text-slate-900">Property Rentals</h2>
             </div>
             <div className="p-4">
-              <form action={createRental} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
+              <form action={createRental as any} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
                 <input type="text" name="title" required placeholder="Property Title" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <input type="number" step="0.01" name="rentAmount" required placeholder="Monthly Rent (€)" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <div className="flex gap-2">
@@ -130,4 +130,5 @@ export default async function AdminPage() {
     </div>
   );
 }
+
 

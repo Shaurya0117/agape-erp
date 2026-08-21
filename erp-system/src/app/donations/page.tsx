@@ -29,7 +29,7 @@ export default async function DonationsPage() {
         {/* Left Column: Form */}
         <div className="lg:col-span-1 bg-white p-6 rounded-none shadow-sm border border-gray-200 h-fit">
           <h2 className="text-xl font-semibold mb-4">Record Donation</h2>
-          <form action={createDonation} className="space-y-4">
+          <form action={createDonation as any} className="space-y-4">
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Contributor / Donor *</label>
@@ -130,4 +130,5 @@ export default async function DonationsPage() {
     </div>
   );
 }
+
 

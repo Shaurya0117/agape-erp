@@ -21,7 +21,7 @@ export default async function RemittancesPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 bg-white p-6 rounded-none shadow-sm border border-gray-200 h-fit">
           <h2 className="text-xl font-semibold mb-4">Log Remittance</h2>
-          <form action={createRemittance} className="space-y-4">
+          <form action={createRemittance as any} className="space-y-4">
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Title / Description</label>
@@ -110,4 +110,5 @@ export default async function RemittancesPage() {
     </div>
   );
 }
+
 
