@@ -33,8 +33,6 @@ export default async function DashboardPage() {
   const expenseAccounts = accounts.filter(a => a.accountType === 'EXPENSES').map(a => a.id)
   const assetAccounts = accounts.filter(a => a.accountType === 'ASSETS').map(a => a.id)
 
-  const allCredits = await prisma.credit.findMany()
-  const allDebits = await prisma.debit.findMany()
 
   // Simplified calculation (Credits increase Revenue, Debits increase Expenses/Assets)
   const totalRevenues = allCredits.filter(c => revenueAccounts.includes(c.accountId)).reduce((acc, c) => acc + c.amount, 0) -
@@ -240,6 +238,7 @@ export default async function DashboardPage() {
     </div>
   );
 }
+
 
 
 
