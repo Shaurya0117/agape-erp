@@ -75,7 +75,7 @@ export default function LoginPage() {
             
             <div className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
+                <label className="block text-sm font-medium text-slate-900 font-bold mb-1.5">Email address</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-slate-600" />
@@ -84,7 +84,7 @@ export default function LoginPage() {
                     name="email"
                     type="email"
                     required
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900"
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 text-slate-900"
                     placeholder="admin@erp.com"
                     defaultValue="admin@erp.com"
                   />
@@ -92,7 +92,7 @@ export default function LoginPage() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+                <label className="block text-sm font-medium text-slate-900 font-bold mb-1.5">Password</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-slate-600" />
@@ -101,7 +101,7 @@ export default function LoginPage() {
                     name="password"
                     type="password"
                     required
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900"
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 text-slate-900"
                     placeholder="••••••••"
                     defaultValue="admin"
                   />
@@ -127,6 +127,8 @@ export default function LoginPage() {
     </div>
   )
 }
+
+
 
 
 

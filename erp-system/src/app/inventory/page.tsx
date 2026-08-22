@@ -44,17 +44,17 @@ export default async function InventoryPage({
             </div>
             <form action={createItem as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-600">Item Name</label>
-                <input type="text" name="name" required className="w-full pl-3 pr-4 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900" placeholder="e.g., Medical Blankets" />
+                <label className="text-sm font-semibold text-slate-900 font-bold">Item Name</label>
+                <input type="text" name="name" required className="w-full pl-3 pr-4 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900 text-slate-900" placeholder="e.g., Medical Blankets" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-600">SKU Code</label>
-                  <input type="text" name="sku" required className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900" placeholder="BLK-001" />
+                  <label className="text-sm font-semibold text-slate-900 font-bold">SKU Code</label>
+                  <input type="text" name="sku" required className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900 text-slate-900" placeholder="BLK-001" />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-600">Category</label>
-                  <select name="category" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900">
+                  <label className="text-sm font-semibold text-slate-900 font-bold">Category</label>
+                  <select name="category" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-900 text-slate-900">
                     <option value="Supplies">Supplies</option>
                     <option value="Food">Food</option>
                     <option value="Medical">Medical</option>
@@ -64,17 +64,17 @@ export default async function InventoryPage({
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-600">Initial Qty</label>
-                  <input type="number" name="quantity" defaultValue={0} className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900" />
+                  <label className="text-sm font-semibold text-slate-900 font-bold">Initial Qty</label>
+                  <input type="number" name="quantity" defaultValue={0} className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900 text-slate-900" />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-600">Unit</label>
-                  <input type="text" name="unit" defaultValue="pcs" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900" />
+                  <label className="text-sm font-semibold text-slate-900 font-bold">Unit</label>
+                  <input type="text" name="unit" defaultValue="pcs" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900 text-slate-900" />
                 </div>
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-600">Warehouse Location</label>
-                <input type="text" name="location" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900" placeholder="e.g., Aisle 4, Shelf B" />
+                <label className="text-sm font-semibold text-slate-900 font-bold">Warehouse Location</label>
+                <input type="text" name="location" className="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-none text-slate-900 text-slate-900" placeholder="e.g., Aisle 4, Shelf B" />
               </div>
               <button type="submit" className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-none shadow-lg text-sm font-bold text-black bg-emerald-400 hover:bg-emerald-500 transition-colors">
                 Save Item to Inventory
@@ -126,4 +126,6 @@ export default async function InventoryPage({
     </div>
   )
 }
+
+
 

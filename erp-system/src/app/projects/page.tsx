@@ -42,7 +42,7 @@ export default async function ProjectsPage({
             </div>
             <form action={createProject as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Project Title</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Project Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Briefcase className="h-5 w-5 text-slate-600" />
@@ -51,14 +51,14 @@ export default async function ProjectsPage({
                     type="text" 
                     name="title" 
                     required 
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                     placeholder="e.g. Clean Water Initiative"
                   />
                 </div>
               </div>
               
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Target Budget (€)</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Target Budget (€)</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Euro className="h-5 w-5 text-slate-600" />
@@ -67,21 +67,21 @@ export default async function ProjectsPage({
                     type="number"
                     step="0.01" 
                     name="budget" 
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                     placeholder="50000.00"
                   />
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Work Stage</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Work Stage</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Target className="h-5 w-5 text-slate-600" />
                   </div>
                   <select 
                     name="workStage" 
-                    className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white appearance-none"
+                    className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white appearance-none text-slate-900"
                   >
                     <option value="PLANNING">Planning</option>
                     <option value="ACTIVE">Active</option>
@@ -93,19 +93,19 @@ export default async function ProjectsPage({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-700">Start Date</label>
+                  <label className="text-sm font-semibold text-slate-900 font-bold">Start Date</label>
                   <input 
                     type="date" 
                     name="startDate" 
-                    className="block w-full px-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full px-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-700">Project Code</label>
+                  <label className="text-sm font-semibold text-slate-900 font-bold">Project Code</label>
                   <input 
                     type="text" 
                     name="code" 
-                    className="block w-full px-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full px-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                     placeholder="PRJ-001"
                   />
                 </div>
@@ -187,6 +187,8 @@ export default async function ProjectsPage({
     </div>
   );
 }
+
+
 
 
 

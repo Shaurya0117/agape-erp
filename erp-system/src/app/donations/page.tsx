@@ -33,11 +33,11 @@ export default async function DonationsPage() {
           <form action={createDonation as any} className="space-y-4">
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Contributor / Donor *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Contributor / Donor *</label>
               <select 
                 name="contributorId" 
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900"
               >
                 <option value="">Select a donor...</option>
                 {contributors.map(c => (
@@ -47,33 +47,33 @@ export default async function DonationsPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Amount (€) *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Amount (€) *</label>
               <input 
                 type="number" 
                 step="0.01"
                 name="amount" 
                 required 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="100.00"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Title / Note (Optional)</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Title / Note (Optional)</label>
               <input 
                 type="text" 
                 name="title" 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="e.g. Annual Gala Gift"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Date Received</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Date Received</label>
               <input 
                 type="date" 
                 name="paymentDate" 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
               />
             </div>
 
@@ -131,6 +131,8 @@ export default async function DonationsPage() {
     </div>
   );
 }
+
+
 
 
 

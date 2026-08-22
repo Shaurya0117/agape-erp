@@ -78,23 +78,23 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
         
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-slate-700">Date *</label>
-            <input type="date" value={date} onChange={e => setDate(e.target.value)} required className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500" />
+            <label className="text-sm font-semibold text-slate-900 font-bold">Date *</label>
+            <input type="date" value={date} onChange={e => setDate(e.target.value)} required className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900" />
           </div>
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-slate-700">Description *</label>
-            <input type="text" value={description} onChange={e => setDescription(e.target.value)} required className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500" placeholder="e.g. Contractor Invoice" />
+            <label className="text-sm font-semibold text-slate-900 font-bold">Description *</label>
+            <input type="text" value={description} onChange={e => setDescription(e.target.value)} required className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900" placeholder="e.g. Contractor Invoice" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-slate-700">Reference Number</label>
-            <input type="text" value={reference} onChange={e => setReference(e.target.value)} className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500" placeholder="INV-2026-001" />
+            <label className="text-sm font-semibold text-slate-900 font-bold">Reference Number</label>
+            <input type="text" value={reference} onChange={e => setReference(e.target.value)} className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900" placeholder="INV-2026-001" />
           </div>
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-slate-700">Vendor / Payee</label>
-            <input type="text" value={vendor} onChange={e => setVendor(e.target.value)} className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500" placeholder="e.g. Alpha Bank" />
+            <label className="text-sm font-semibold text-slate-900 font-bold">Vendor / Payee</label>
+            <input type="text" value={vendor} onChange={e => setVendor(e.target.value)} className="w-full px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900" placeholder="e.g. Alpha Bank" />
           </div>
         </div>
 
@@ -107,11 +107,11 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
           <div className="space-y-2">
             {debits.map((d, index) => (
               <div key={d.id} className="flex gap-2 items-center">
-                <select value={d.accountId} onChange={e => updateDebit(d.id, 'accountId', e.target.value)} className="flex-1 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500">
+                <select value={d.accountId} onChange={e => updateDebit(d.id, 'accountId', e.target.value)} className="flex-1 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900">
                   <option value="">Select Account...</option>
                   {accounts.map(a => <option key={a.id} value={a.id}>{a.gasCode} - {a.title}</option>)}
                 </select>
-                <input type="number" step="0.01" value={d.amount} onChange={e => updateDebit(d.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono" />
+                <input type="number" step="0.01" value={d.amount} onChange={e => updateDebit(d.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono text-slate-900" />
                 {debits.length > 1 && (
                   <button type="button" onClick={() => removeDebit(d.id)} className="p-2 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
                 )}
@@ -129,11 +129,11 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
           <div className="space-y-2">
             {credits.map((c, index) => (
               <div key={c.id} className="flex gap-2 items-center">
-                <select value={c.accountId} onChange={e => updateCredit(c.id, 'accountId', e.target.value)} className="flex-1 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500">
+                <select value={c.accountId} onChange={e => updateCredit(c.id, 'accountId', e.target.value)} className="flex-1 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-slate-900">
                   <option value="">Select Account...</option>
                   {accounts.map(a => <option key={a.id} value={a.id}>{a.gasCode} - {a.title}</option>)}
                 </select>
-                <input type="number" step="0.01" value={c.amount} onChange={e => updateCredit(c.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono" />
+                <input type="number" step="0.01" value={c.amount} onChange={e => updateCredit(c.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono text-slate-900" />
                 {credits.length > 1 && (
                   <button type="button" onClick={() => removeCredit(c.id)} className="p-2 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
                 )}
@@ -170,4 +170,6 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
     </div>
   );
 }
+
+
 

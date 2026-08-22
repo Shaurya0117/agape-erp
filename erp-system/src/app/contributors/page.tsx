@@ -22,51 +22,51 @@ export default async function ContributorsPage() {
           <h2 className="text-xl font-semibold mb-4">Add New Contributor</h2>
           <form action={createContributor as any} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Full Name *</label>
               <input 
                 type="text" 
                 name="fullName" 
                 required 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="e.g. John Doe / ACME Corp"
               />
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <label className="block text-sm font-medium text-slate-900 font-bold mb-1">First Name</label>
                 <input 
                   type="text" 
                   name="firstName" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                  className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Last Name</label>
                 <input 
                   type="text" 
                   name="lastName" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                  className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Email Address</label>
               <input 
                 type="email" 
                 name="email" 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="john@example.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Tax ID (AFM)</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Tax ID (AFM)</label>
               <input 
                 type="text" 
                 name="taxId" 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="Greek Tax ID"
               />
             </div>
@@ -138,6 +138,8 @@ export default async function ContributorsPage() {
     </div>
   );
 }
+
+
 
 
 

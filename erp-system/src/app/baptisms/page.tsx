@@ -18,33 +18,33 @@ export default async function BaptismsPage() {
           <h2 className="text-xl font-semibold mb-4">Record New Baptism</h2>
           <form action={createBaptism as any} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Title *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Title *</label>
               <input 
                 type="text" 
                 name="title" 
                 required 
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
                 placeholder="e.g. 2024 Sponsorship"
               />
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Godchild Name *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Godchild Name *</label>
               <input 
                 type="text" 
                 name="godchildName" 
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Registration Date *</label>
+              <label className="block text-sm font-medium text-slate-900 font-bold mb-1">Registration Date *</label>
               <input 
                 type="date" 
                 name="registrationDate" 
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" 
+                className="w-full px-3 py-2 border border-gray-300 rounded-none shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-slate-900" 
               />
             </div>
 
@@ -97,6 +97,8 @@ export default async function BaptismsPage() {
     </div>
   );
 }
+
+
 
 
 

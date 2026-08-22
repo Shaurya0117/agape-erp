@@ -27,32 +27,32 @@ export default async function LogisticsPage() {
             
             <form action={createContainer as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Container Content / Title</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Container Content / Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Box className="h-5 w-5 text-slate-600" />
                   </div>
-                  <input type="text" name="title" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" placeholder="e.g. Medical Supplies" />
+                  <input type="text" name="title" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50 text-slate-900" placeholder="e.g. Medical Supplies" />
                 </div>
               </div>
               
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Tracking Identifier</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Tracking Identifier</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Tag className="h-5 w-5 text-slate-600" />
                   </div>
-                  <input type="text" name="identifier" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" placeholder="MSCU-1234567" />
+                  <input type="text" name="identifier" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50 text-slate-900" placeholder="MSCU-1234567" />
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Departure Date</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Departure Date</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Calendar className="h-5 w-5 text-slate-600" />
                   </div>
-                  <input type="date" name="departureDate" className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" />
+                  <input type="date" name="departureDate" className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50 text-slate-900" />
                 </div>
               </div>
 
@@ -102,6 +102,8 @@ export default async function LogisticsPage() {
     </div>
   );
 }
+
+
 
 
 

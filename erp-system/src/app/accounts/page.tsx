@@ -26,7 +26,7 @@ export default async function AccountsPage() {
             
             <form action={createAccount as any} className="p-6 space-y-5">
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Account Title</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Account Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Building2 className="h-5 w-5 text-slate-600" />
@@ -35,14 +35,14 @@ export default async function AccountsPage() {
                     type="text" 
                     name="title" 
                     required 
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                     placeholder="e.g. Main Bank Account"
                   />
                 </div>
               </div>
               
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">Category Type</label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">Category Type</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Wallet className="h-5 w-5 text-slate-600" />
@@ -50,7 +50,7 @@ export default async function AccountsPage() {
                   <select 
                     name="accountType" 
                     required
-                    className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white appearance-none"
+                    className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white appearance-none text-slate-900"
                   >
                     <option value="ASSETS">Assets</option>
                     <option value="EQUITY">Equity</option>
@@ -63,7 +63,7 @@ export default async function AccountsPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">GAS Code <span className="text-slate-600 font-normal">(Optional)</span></label>
+                <label className="text-sm font-semibold text-slate-900 font-bold">GAS Code <span className="text-slate-600 font-normal">(Optional)</span></label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Hash className="h-4 w-4 text-slate-600" />
@@ -71,7 +71,7 @@ export default async function AccountsPage() {
                   <input 
                     type="text" 
                     name="gasCode" 
-                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white" 
+                    className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 transition-colors sm:text-sm text-slate-900 bg-slate-50 focus:bg-white text-slate-900" 
                     placeholder="Greek Accounting Std"
                   />
                 </div>
@@ -152,6 +152,8 @@ export default async function AccountsPage() {
     </div>
   );
 }
+
+
 
 
 

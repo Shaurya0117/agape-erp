@@ -30,15 +30,15 @@ export default async function DocumentsPage() {
             </div>
             <div className="p-4">
               <form action={createVoucher as any} className="space-y-3 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
-                <input type="text" name="title" required placeholder="Voucher Description" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
+                <input type="text" name="title" required placeholder="Voucher Description" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-900" />
                 <div className="flex gap-2">
                   <div className="relative w-1/2">
                     <Hash className="absolute left-3 top-2.5 w-4 h-4 text-slate-600" />
-                    <input type="text" name="identifier" required placeholder="VCH-1234" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
+                    <input type="text" name="identifier" required placeholder="VCH-1234" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-900" />
                   </div>
                   <div className="relative w-1/2">
                     <LinkIcon className="absolute left-3 top-2.5 w-4 h-4 text-slate-600" />
-                    <select name="articleId" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white">
+                    <select name="articleId" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white text-slate-900">
                       <option value="">Attach to Transaction (Optional)</option>
                       {articles.map(a => (
                         <option key={a.id} value={a.id}>{new Date(a.date).toLocaleDateString()} - {a.description}</option>
@@ -83,12 +83,12 @@ export default async function DocumentsPage() {
             </div>
             <div className="p-4">
               <form action={createProtocol as any} className="flex gap-2 mb-6 bg-slate-50 p-4 rounded-none border border-slate-100">
-                <select name="direction" className="px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white">
+                <select name="direction" className="px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white text-slate-900">
                   <option value="INCOMING">Incoming</option>
                   <option value="OUTGOING">Outgoing</option>
                 </select>
-                <input type="text" name="title" required placeholder="Letter Subject" className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
-                <input type="date" name="date" required className="w-32 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
+                <input type="text" name="title" required placeholder="Letter Subject" className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-900" />
+                <input type="date" name="date" required className="w-32 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-900" />
                 <button type="submit" className="bg-slate-900 text-white p-2 rounded-none hover:bg-slate-700 transition">
                   <Plus className="w-5 h-5" />
                 </button>
@@ -123,6 +123,8 @@ export default async function DocumentsPage() {
     </div>
   );
 }
+
+
 
 
 
