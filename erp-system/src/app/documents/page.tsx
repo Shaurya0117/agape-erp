@@ -33,11 +33,11 @@ export default async function DocumentsPage() {
                 <input type="text" name="title" required placeholder="Voucher Description" className="w-full px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <div className="flex gap-2">
                   <div className="relative w-1/2">
-                    <Hash className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                    <Hash className="absolute left-3 top-2.5 w-4 h-4 text-slate-500" />
                     <input type="text" name="identifier" required placeholder="VCH-1234" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                   </div>
                   <div className="relative w-1/2">
-                    <LinkIcon className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                    <LinkIcon className="absolute left-3 top-2.5 w-4 h-4 text-slate-500" />
                     <select name="articleId" className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 bg-white">
                       <option value="">Attach to Transaction (Optional)</option>
                       {articles.map(a => (
@@ -46,7 +46,7 @@ export default async function DocumentsPage() {
                     </select>
                   </div>
                 </div>
-                <button type="submit" className="w-full bg-slate-800 text-white text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Log Voucher</button>
+                <button type="submit" className="w-full bg-slate-800 text-slate-900 text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Log Voucher</button>
               </form>
 
               <div className="space-y-3">
@@ -64,7 +64,7 @@ export default async function DocumentsPage() {
                           <LinkIcon className="w-3 h-3 text-emerald-500" /> Attached: {v.article.description}
                         </p>
                       ) : (
-                        <p className="text-xs text-slate-400 mt-2">Unattached</p>
+                        <p className="text-xs text-slate-500 mt-2">Unattached</p>
                       )}
                     </div>
                   ))
@@ -89,7 +89,7 @@ export default async function DocumentsPage() {
                 </select>
                 <input type="text" name="title" required placeholder="Letter Subject" className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <input type="date" name="date" required className="w-32 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
-                <button type="submit" className="bg-slate-800 text-white p-2 rounded-none hover:bg-slate-700 transition">
+                <button type="submit" className="bg-slate-800 text-slate-900 p-2 rounded-none hover:bg-slate-700 transition">
                   <Plus className="w-5 h-5" />
                 </button>
               </form>
@@ -108,7 +108,7 @@ export default async function DocumentsPage() {
                         )}
                         <div>
                           <p className="font-medium text-slate-800 text-sm">{p.title}</p>
-                          <p className="text-xs text-slate-400">{new Date(p.date).toLocaleDateString()}</p>
+                          <p className="text-xs text-slate-500">{new Date(p.date).toLocaleDateString()}</p>
                         </div>
                       </div>
                     </div>

@@ -15,9 +15,9 @@ export function DashboardCharts({ monthlyData, projectData }: ChartDataProps) {
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-8">
       
       {/* Cashflow Area Chart */}
-      <div className="bg-[#131316] p-6 rounded-none shadow-2xl border border-white/[0.05]">
+      <div className="bg-white p-6 rounded-none shadow-2xl border border-slate-200">
         <div className="mb-6">
-          <h3 className="text-lg font-bold text-white">Cashflow Trend</h3>
+          <h3 className="text-lg font-bold text-slate-900">Cashflow Trend</h3>
           <p className="text-sm text-slate-500">Monthly revenues vs expenses overview.</p>
         </div>
         <div className="h-[300px] w-full">
@@ -49,9 +49,9 @@ export function DashboardCharts({ monthlyData, projectData }: ChartDataProps) {
       </div>
 
       {/* Project Budgets Bar Chart */}
-      <div className="bg-[#131316] p-6 rounded-none shadow-2xl border border-white/[0.05]">
+      <div className="bg-white p-6 rounded-none shadow-2xl border border-slate-200">
         <div className="mb-6">
-          <h3 className="text-lg font-bold text-white">Project Budgets</h3>
+          <h3 className="text-lg font-bold text-slate-900">Project Budgets</h3>
           <p className="text-sm text-slate-500">Target budgets vs actual expenditures.</p>
         </div>
         <div className="h-[300px] w-full">

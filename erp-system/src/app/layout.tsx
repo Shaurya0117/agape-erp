@@ -39,16 +39,16 @@ export default async function RootLayout({
   const dict = dictionaries[locale].sidebar;
 
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-[#09090b] text-slate-300 flex h-screen overflow-hidden selection:bg-amber-500/30`}>
+    <html lang="en" className="">
+      <body className={`${inter.className} bg-slate-50 text-slate-600 flex h-screen overflow-hidden selection:bg-amber-500/30`}>
         {/* Sidebar Navigation */}
-        <aside className="w-72 bg-[#09090b] flex flex-col hidden md:flex border-r border-white/[0.05] z-20 relative">
+        <aside className="w-72 bg-slate-50 flex flex-col hidden md:flex border-r border-slate-200 z-20 relative">
           
           {/* Subtle background glow in sidebar */}
           <div className="absolute top-0 left-0 w-full h-64 bg-indigo-500/10 blur-[100px] pointer-events-none"></div>
 
-          <div className="p-8 flex flex-col items-center border-b border-white/[0.05] relative z-10">
-            <div className="w-28 h-28 rounded-none overflow-hidden mb-6 shadow-2xl shadow-black/50 border border-white/10 relative bg-black flex items-center justify-center group">
+          <div className="p-8 flex flex-col items-center border-b border-slate-200 relative z-10">
+            <div className="w-28 h-28 rounded-none overflow-hidden mb-6 shadow-2xl shadow-black/50 border border-slate-200 relative bg-black flex items-center justify-center group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <img src="/cross-art.png" alt="Orthodox Cross" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
             </div>
@@ -57,70 +57,70 @@ export default async function RootLayout({
           
           <nav className="flex-1 px-3 py-6 space-y-1 overflow-y-auto custom-scrollbar">
             <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-4">Overview</p>
-            <Link href="/" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <LayoutDashboard className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <LayoutDashboard className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.dashboard}</span>
             </Link>
-            <Link href="/reports" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <TrendingUp className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/reports" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <TrendingUp className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.reports}</span>
             </Link>
 
             <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">Accounting</p>
-            <Link href="/financials" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <FileText className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/financials" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <FileText className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.financials}</span>
             </Link>
-            <Link href="/accounts" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Wallet className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/accounts" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Wallet className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.accounts}</span>
             </Link>
-            <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <ReceiptText className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <ReceiptText className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.transactions}</span>
             </Link>
 
             <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">CRM & Operations</p>
-            <Link href="/contributors" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Users className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/contributors" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Users className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.contributors}</span>
             </Link>
-            <Link href="/donations" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <HeartHandshake className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/donations" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <HeartHandshake className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.donations}</span>
             </Link>
-            <Link href="/projects" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Briefcase className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/projects" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Briefcase className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.projects}</span>
             </Link>
-            <Link href="/baptisms" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Baby className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/baptisms" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Baby className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.baptisms}</span>
             </Link>
-            <Link href="/logistics" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Ship className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/logistics" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Ship className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.logistics}</span>
             </Link>
-            <Link href="/inventory" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Package className="w-5 h-5 text-slate-400 group-hover:text-emerald-400 transition-colors" />
+            <Link href="/inventory" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Package className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
               <span className="font-medium">{dict.inventory}</span>
             </Link>
             
             <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">{dict.administration}</p>
-              <Link href="/users" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-                <ShieldAlert className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+              <Link href="/users" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+                <ShieldAlert className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
                 <span className="font-medium">{dict.accessRoles}</span>
               </Link>
-            <Link href="/admin" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Building2 className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/admin" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Building2 className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.adminAssets}</span>
             </Link>
-            <Link href="/documents" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <FileBadge className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/documents" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <FileBadge className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.documents}</span>
             </Link>
-            <Link href="/remittances" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-white/[0.08] hover:translate-x-1 hover:text-white group shadow-none hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              <Send className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/remittances" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
+              <Send className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.remittances}</span>
             </Link>
 

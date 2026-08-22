@@ -29,6 +29,8 @@ model Article {
   description     String
   date            DateTime
   balanceSheet    Boolean     @default(false)
+  referenceNumber String?
+  vendorName      String?
   
   debits          Debit[]
   credits         Credit[]
@@ -87,6 +89,9 @@ model Contributor {
   firstName       String?
   email           String?
   taxId           String?
+  phone           String?
+  address         String?
+  company         String?
   
   donations       Donation[]
   comments        Comment[]
@@ -140,6 +145,8 @@ model Project {
   startDate       DateTime?
   completionDate  DateTime?
   workStage       String?
+  description     String?
+  status          String  @default("ACTIVE")
   budget          Float?
 
   remittances     Remittance[]

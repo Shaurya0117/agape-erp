@@ -79,14 +79,14 @@ export default async function DashboardPage() {
             <Activity className="w-5 h-5" />
             <span className="text-sm font-bold tracking-wider uppercase">Live Overview</span>
           </div>
-          <h1 className="text-4xl font-black text-white tracking-tight">Financial Command Center</h1>
-          <p className="text-slate-400 mt-2 text-lg">Real-time insights for Agape ERP operations.</p>
+          <h1 className="text-4xl font-black text-slate-900 tracking-tight">Financial Command Center</h1>
+          <p className="text-slate-500 mt-2 text-lg">Real-time insights for Agape ERP operations.</p>
         </div>
         <div className="flex gap-3">
-          <Link href="/articles" className="px-5 py-2.5 bg-[#18181b] border border-white/10 text-slate-300 rounded-none font-medium hover:bg-white/5 transition shadow-sm">
+          <Link href="/articles" className="px-5 py-2.5 bg-[#18181b] border border-slate-200 text-slate-600 rounded-none font-medium hover:bg-white/5 transition shadow-sm">
             View Ledger
           </Link>
-          <Link href="/financials" className="px-5 py-2.5 bg-indigo-600 text-white rounded-none font-medium hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20">
+          <Link href="/financials" className="px-5 py-2.5 bg-indigo-600 text-slate-900 rounded-none font-medium hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20">
             Generate Report
           </Link>
         </div>
@@ -97,14 +97,14 @@ export default async function DashboardPage() {
         
         {/* KPI 1: Net Surplus */}
         <div className="bg-gradient-to-br from-indigo-500 to-violet-600 rounded-none p-[1px] shadow-2xl shadow-indigo-500/20">
-          <div className="bg-[#09090b]/80 backdrop-blur-xl rounded-none p-6 h-full">
+          <div className="bg-slate-50/80 backdrop-blur-xl rounded-none p-6 h-full">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-indigo-200 font-medium tracking-wide">Net Surplus</h2>
               <div className="p-2 bg-indigo-500/20 rounded-none">
                 <TrendingUp className="w-5 h-5 text-indigo-400" />
               </div>
             </div>
-            <p className="text-3xl font-black text-white mb-1">
+            <p className="text-3xl font-black text-slate-900 mb-1">
               €{netSurplus.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </p>
             <div className="flex items-center gap-1 text-emerald-400 text-sm font-medium mt-3">
@@ -115,16 +115,16 @@ export default async function DashboardPage() {
         </div>
 
         {/* KPI 2: Total Assets */}
-        <div className="bg-[#131316] rounded-none p-6 shadow-2xl border border-white/[0.05] relative overflow-hidden group hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
+        <div className="bg-white rounded-none p-6 shadow-2xl border border-slate-200 relative overflow-hidden group hover:border-slate-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-white/[0.02] rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-400 font-medium tracking-wide">Liquid Assets</h2>
-              <div className="p-2 bg-white/5 text-slate-300 rounded-none">
+              <h2 className="text-slate-500 font-medium tracking-wide">Liquid Assets</h2>
+              <div className="p-2 bg-white/5 text-slate-600 rounded-none">
                 <Wallet className="w-5 h-5" />
               </div>
             </div>
-            <p className="text-3xl font-black text-white mb-1">
+            <p className="text-3xl font-black text-slate-900 mb-1">
               €{totalAssets.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </p>
             <p className="text-slate-500 text-sm mt-3">Total cash on hand</p>
@@ -132,16 +132,16 @@ export default async function DashboardPage() {
         </div>
 
         {/* KPI 3: Revenues */}
-        <div className="bg-[#131316] rounded-none p-6 shadow-2xl border border-white/[0.05] relative overflow-hidden group hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
+        <div className="bg-white rounded-none p-6 shadow-2xl border border-slate-200 relative overflow-hidden group hover:border-slate-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/5 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-400 font-medium tracking-wide">Gross Revenue</h2>
+              <h2 className="text-slate-500 font-medium tracking-wide">Gross Revenue</h2>
               <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-none">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
             </div>
-            <p className="text-3xl font-black text-white mb-1">
+            <p className="text-3xl font-black text-slate-900 mb-1">
               €{totalRevenues.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </p>
             <p className="text-slate-500 text-sm mt-3">YTD Income</p>
@@ -149,16 +149,16 @@ export default async function DashboardPage() {
         </div>
 
         {/* KPI 4: Active Projects */}
-        <div className="bg-[#131316] rounded-none p-6 shadow-2xl border border-white/[0.05] relative overflow-hidden group hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
+        <div className="bg-white rounded-none p-6 shadow-2xl border border-slate-200 relative overflow-hidden group hover:border-slate-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-500/5 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-400 font-medium tracking-wide">Active Missions</h2>
+              <h2 className="text-slate-500 font-medium tracking-wide">Active Missions</h2>
               <div className="p-2 bg-blue-500/10 text-blue-400 rounded-none">
                 <Users className="w-5 h-5" />
               </div>
             </div>
-            <p className="text-3xl font-black text-white mb-1">
+            <p className="text-3xl font-black text-slate-900 mb-1">
               {projects.length}
             </p>
             <p className="text-slate-500 text-sm mt-3">Ongoing charitable projects</p>
@@ -171,10 +171,10 @@ export default async function DashboardPage() {
       <DashboardCharts monthlyData={monthlyData} projectData={projectData} />
 
       {/* Recent Ledger Activity */}
-      <div className="mt-8 bg-[#131316] rounded-none shadow-2xl border border-white/[0.05] overflow-hidden">
-        <div className="px-8 py-6 border-b border-white/[0.05] flex items-center justify-between bg-black/20">
+      <div className="mt-8 bg-white rounded-none shadow-2xl border border-slate-200 overflow-hidden">
+        <div className="px-8 py-6 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div>
-            <h2 className="text-xl font-bold text-white">Recent Transactions</h2>
+            <h2 className="text-xl font-bold text-slate-900">Recent Transactions</h2>
             <p className="text-sm text-slate-500 mt-1">Latest double-entry ledger activity.</p>
           </div>
           <Link href="/articles" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm flex items-center gap-1 bg-indigo-500/10 px-4 py-2 rounded-none transition-colors">
@@ -183,7 +183,7 @@ export default async function DashboardPage() {
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-white/[0.05]">
-            <thead className="bg-[#09090b]/50">
+            <thead className="bg-slate-50/50">
               <tr>
                 <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
                 <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Description</th>
@@ -207,7 +207,7 @@ export default async function DashboardPage() {
 
                   return (
                     <tr key={article.id} className="hover:bg-white/[0.04] hover:scale-[1.01] hover:shadow-lg transition-colors group">
-                      <td className="px-8 py-5 whitespace-nowrap text-sm text-slate-400 font-medium">
+                      <td className="px-8 py-5 whitespace-nowrap text-sm text-slate-500 font-medium">
                         {new Date(article.date).toLocaleDateString()}
                       </td>
                       <td className="px-8 py-5 text-sm text-slate-200 font-medium">

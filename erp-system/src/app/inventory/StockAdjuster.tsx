@@ -21,15 +21,15 @@ export default function StockAdjuster({ itemId, initialQuantity }: { itemId: str
       <button 
         onClick={() => handleAdjust(-1)}
         disabled={isPending || qty === 0}
-        className="p-1 rounded bg-white/[0.05] hover:bg-white/[0.1] text-slate-300 disabled:opacity-50"
+        className="p-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 disabled:opacity-50"
       >
         <Minus className="w-4 h-4" />
       </button>
-      <span className="w-8 text-center font-bold text-white">{qty}</span>
+      <span className="w-8 text-center font-bold text-slate-900">{qty}</span>
       <button 
         onClick={() => handleAdjust(1)}
         disabled={isPending}
-        className="p-1 rounded bg-white/[0.05] hover:bg-white/[0.1] text-slate-300 disabled:opacity-50"
+        className="p-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 disabled:opacity-50"
       >
         <Plus className="w-4 h-4" />
       </button>

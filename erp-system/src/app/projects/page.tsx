@@ -45,7 +45,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Project Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Briefcase className="h-5 w-5 text-slate-400" />
+                    <Briefcase className="h-5 w-5 text-slate-500" />
                   </div>
                   <input 
                     type="text" 
@@ -61,7 +61,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Target Budget (€)</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Euro className="h-5 w-5 text-slate-400" />
+                    <Euro className="h-5 w-5 text-slate-500" />
                   </div>
                   <input 
                     type="number"
@@ -77,7 +77,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Work Stage</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Target className="h-5 w-5 text-slate-400" />
+                    <Target className="h-5 w-5 text-slate-500" />
                   </div>
                   <select 
                     name="workStage" 
@@ -113,7 +113,7 @@ export default async function ProjectsPage({
 
               <button 
                 type="submit" 
-                className="w-full mt-2 bg-indigo-600 text-white py-2.5 px-4 rounded-none hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg font-medium flex justify-center items-center gap-2"
+                className="w-full mt-2 bg-indigo-600 text-slate-900 py-2.5 px-4 rounded-none hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg font-medium flex justify-center items-center gap-2"
               >
                 Save Project
               </button>
@@ -137,7 +137,7 @@ export default async function ProjectsPage({
                   {projects.length === 0 ? (
                     <tr>
                       <td colSpan={3} className="px-6 py-16 text-center">
-                        <div className="flex flex-col items-center justify-center text-slate-400">
+                        <div className="flex flex-col items-center justify-center text-slate-500">
                           <Briefcase className="w-12 h-12 mb-3 text-slate-200" />
                           <p className="text-base font-medium text-slate-600">No projects found</p>
                           <p className="text-sm">Create your first initiative.</p>

@@ -52,7 +52,7 @@ export default async function ReportsPage() {
                     <span className="text-sm font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
                       {project.workStage || "PLANNING"}
                     </span>
-                    <span className="text-sm text-slate-400">
+                    <span className="text-sm text-slate-500">
                       Code: {project.code || "N/A"}
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export default async function ReportsPage() {
         
         {projects.length === 0 && (
           <div className="bg-white p-12 rounded-none shadow-sm border border-slate-200 text-center text-slate-500">
-            <PieChart className="w-12 h-12 mx-auto mb-4 text-slate-300" />
+            <PieChart className="w-12 h-12 mx-auto mb-4 text-slate-600" />
             <p className="text-lg font-medium text-slate-900">No active projects</p>
             <p>Create a project to see financial reports here.</p>
           </div>

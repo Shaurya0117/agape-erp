@@ -29,7 +29,7 @@ export default async function AccountsPage() {
                 <label className="text-sm font-semibold text-slate-700">Account Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Building2 className="h-5 w-5 text-slate-400" />
+                    <Building2 className="h-5 w-5 text-slate-500" />
                   </div>
                   <input 
                     type="text" 
@@ -45,7 +45,7 @@ export default async function AccountsPage() {
                 <label className="text-sm font-semibold text-slate-700">Category Type</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Wallet className="h-5 w-5 text-slate-400" />
+                    <Wallet className="h-5 w-5 text-slate-500" />
                   </div>
                   <select 
                     name="accountType" 
@@ -63,10 +63,10 @@ export default async function AccountsPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">GAS Code <span className="text-slate-400 font-normal">(Optional)</span></label>
+                <label className="text-sm font-semibold text-slate-700">GAS Code <span className="text-slate-500 font-normal">(Optional)</span></label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Hash className="h-4 w-4 text-slate-400" />
+                    <Hash className="h-4 w-4 text-slate-500" />
                   </div>
                   <input 
                     type="text" 
@@ -79,7 +79,7 @@ export default async function AccountsPage() {
 
               <button 
                 type="submit" 
-                className="w-full mt-2 bg-indigo-600 text-white py-2.5 px-4 rounded-none hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg font-medium flex justify-center items-center gap-2"
+                className="w-full mt-2 bg-indigo-600 text-slate-900 py-2.5 px-4 rounded-none hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg font-medium flex justify-center items-center gap-2"
               >
                 Create Account
               </button>
@@ -104,7 +104,7 @@ export default async function AccountsPage() {
                   {accounts.length === 0 ? (
                     <tr>
                       <td colSpan={4} className="px-6 py-16 text-center">
-                        <div className="flex flex-col items-center justify-center text-slate-400">
+                        <div className="flex flex-col items-center justify-center text-slate-500">
                           <Building2 className="w-12 h-12 mb-3 text-slate-200" />
                           <p className="text-base font-medium text-slate-600">No accounts found</p>
                           <p className="text-sm">Create your first account using the form.</p>
@@ -135,7 +135,7 @@ export default async function AccountsPage() {
                         <td className="px-6 py-4 whitespace-nowrap text-right">
                           <form action={deleteAccount as any}>
                             <input type="hidden" name="id" value={account.id} />
-                            <button type="submit" className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-none transition-colors" title="Delete Account">
+                            <button type="submit" className="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-none transition-colors" title="Delete Account">
                               <Trash2 className="w-4 h-4" />
                             </button>
                           </form>

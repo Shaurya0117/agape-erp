@@ -34,7 +34,7 @@ export default async function AdminPage() {
                   <input type="number" name="topic" placeholder="Topic #" className="w-1/3 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                   <input type="date" name="date" required className="w-1/3 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 </div>
-                <button type="submit" className="w-full bg-slate-800 text-white text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Record Minute</button>
+                <button type="submit" className="w-full bg-slate-800 text-slate-900 text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Record Minute</button>
               </form>
 
               <div className="space-y-3">
@@ -67,7 +67,7 @@ export default async function AdminPage() {
               <form action={createFixedAsset as any} className="flex gap-2 mb-6">
                 <input type="text" name="description" required placeholder="Asset Name" className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
                 <input type="number" name="quantity" defaultValue={1} className="w-20 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600" />
-                <button type="submit" className="bg-slate-800 text-white p-2 rounded-none hover:bg-slate-700 transition">
+                <button type="submit" className="bg-slate-800 text-slate-900 p-2 rounded-none hover:bg-slate-700 transition">
                   <Plus className="w-5 h-5" />
                 </button>
               </form>
@@ -103,7 +103,7 @@ export default async function AdminPage() {
                   <input type="date" name="startDate" className="w-1/2 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-500" title="Start Date" />
                   <input type="date" name="endDate" className="w-1/2 px-3 py-2 text-sm border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 text-slate-500" title="End Date" />
                 </div>
-                <button type="submit" className="w-full bg-slate-800 text-white text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Add Rental</button>
+                <button type="submit" className="w-full bg-slate-800 text-slate-900 text-sm py-2 rounded-none hover:bg-slate-700 transition font-medium">Add Rental</button>
               </form>
 
               <div className="space-y-3">

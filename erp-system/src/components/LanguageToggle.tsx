@@ -15,7 +15,7 @@ export default function LanguageToggle({ currentLocale }: { currentLocale: strin
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 px-3 py-1.5 rounded-none border border-white/[0.1] bg-white/[0.05] hover:bg-white/[0.1] transition-colors text-xs font-bold text-white uppercase"
+      className="flex items-center gap-2 px-3 py-1.5 rounded-none border border-white/[0.1] bg-slate-100 hover:bg-slate-200 transition-colors text-xs font-bold text-slate-900 uppercase"
     >
       <Globe className="w-4 h-4 text-indigo-400" />
       {currentLocale === "en" ? "ΕΛ" : "EN"}

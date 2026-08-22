@@ -21,20 +21,20 @@ export default async function UsersPage() {
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-12">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">Access Control</h1>
-          <p className="text-slate-400 mt-2">Manage staff accounts and module-specific permissions.</p>
+          <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Access Control</h1>
+          <p className="text-slate-500 mt-2">Manage staff accounts and module-specific permissions.</p>
         </div>
       </div>
 
-      <div className="bg-[#131316] shadow-2xl border border-white/[0.05] overflow-hidden rounded-none">
-        <div className="px-8 py-6 border-b border-white/[0.05] bg-black/20 flex items-center gap-3">
+      <div className="bg-white shadow-2xl border border-slate-200 overflow-hidden rounded-none">
+        <div className="px-8 py-6 border-b border-slate-200 bg-slate-50 flex items-center gap-3">
           <Key className="w-5 h-5 text-indigo-400" />
-          <h2 className="text-xl font-bold text-white">System Users</h2>
+          <h2 className="text-xl font-bold text-slate-900">System Users</h2>
         </div>
         
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-white/[0.05]">
-            <thead className="bg-[#09090b]/50">
+            <thead className="bg-slate-50/50">
               <tr>
                 <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">User</th>
                 <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Super Admin</th>
@@ -48,7 +48,7 @@ export default async function UsersPage() {
               {users.map(user => (
                 <tr key={user.id} className="hover:bg-white/[0.02] transition-colors">
                   <td className="px-8 py-5 whitespace-nowrap">
-                    <div className="text-sm font-bold text-white">{user.name || "Unknown"}</div>
+                    <div className="text-sm font-bold text-slate-900">{user.name || "Unknown"}</div>
                     <div className="text-sm text-slate-500">{user.email}</div>
                   </td>
                   <td className="px-8 py-5 whitespace-nowrap text-center">

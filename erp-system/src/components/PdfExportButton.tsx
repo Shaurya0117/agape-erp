@@ -45,7 +45,7 @@ export default function PdfExportButton({ title, data, columns, fileName }: PdfE
   return (
     <button 
       onClick={generatePdf}
-      className="bg-indigo-600 text-white px-4 py-2.5 rounded-none shadow-md hover:bg-indigo-700 transition-colors font-medium flex items-center gap-2"
+      className="bg-indigo-600 text-slate-900 px-4 py-2.5 rounded-none shadow-md hover:bg-indigo-700 transition-colors font-medium flex items-center gap-2"
     >
       <Download className="w-4 h-4" />
       Download PDF

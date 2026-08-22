@@ -45,10 +45,10 @@ export default function LoginPage() {
         <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-black/90 to-transparent z-0"></div>
 
         <div className="relative z-10 p-12 text-center flex flex-col items-center">
-          <div className="w-24 h-24 mx-auto bg-black/40 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10 mb-8 shadow-2xl ring-1 ring-gold/20">
+          <div className="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center backdrop-blur-md border border-slate-200 mb-8 shadow-2xl ring-1 ring-gold/20">
             <span className="text-4xl font-black text-amber-500 font-serif">ΙΧ</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-6 tracking-tight drop-shadow-md">Agape ERP</h1>
+          <h1 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight drop-shadow-md">Agape ERP</h1>
           <p className="text-amber-100/90 text-lg max-w-md mx-auto leading-relaxed drop-shadow">
             A comprehensive, double-entry financial management system built to handle donations, projects, and logistics seamlessly.
           </p>
@@ -78,7 +78,7 @@ export default function LoginPage() {
                 <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Mail className="h-5 w-5 text-slate-400" />
+                    <Mail className="h-5 w-5 text-slate-500" />
                   </div>
                   <input
                     name="email"
@@ -95,7 +95,7 @@ export default function LoginPage() {
                 <label className="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Lock className="h-5 w-5 text-slate-400" />
+                    <Lock className="h-5 w-5 text-slate-500" />
                   </div>
                   <input
                     name="password"
@@ -112,13 +112,13 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent text-sm font-medium rounded-none text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 transition-all shadow-md hover:shadow-lg disabled:opacity-70"
+              className="group relative w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent text-sm font-medium rounded-none text-slate-900 bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 transition-all shadow-md hover:shadow-lg disabled:opacity-70"
             >
               {isLoading ? 'Signing in...' : 'Sign in'}
               {!isLoading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
             </button>
             
-            <p className="text-center text-xs text-slate-400 mt-6">
+            <p className="text-center text-xs text-slate-500 mt-6">
               Protected by NextAuth. Authorized personnel only.
             </p>
           </form>

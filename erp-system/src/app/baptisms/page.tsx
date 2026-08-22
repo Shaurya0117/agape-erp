@@ -50,7 +50,7 @@ export default async function BaptismsPage() {
 
             <button 
               type="submit" 
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-150 font-medium"
+              className="w-full bg-blue-600 text-slate-900 py-2 px-4 rounded hover:bg-blue-700 transition duration-150 font-medium"
             >
               Save Record
             </button>
