@@ -139,7 +139,7 @@ export default async function RootLayout({
           <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 h-16 flex items-center px-8 sticky top-0 z-10 shadow-sm">
             <div className="flex-1">
               <div className="text-sm font-medium text-slate-600">Welcome back,</div>
-              <div className="text-lg font-bold text-slate-800 leading-tight">Admin User</div>
+              <div className="text-lg font-bold text-slate-800 leading-tight">Georgios</div>
             </div>
             <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center border-2 border-indigo-200">
               <span className="text-indigo-700 font-bold">A</span>
@@ -157,6 +157,7 @@ export default async function RootLayout({
     </html>
   );
 }
+
 
 
 
