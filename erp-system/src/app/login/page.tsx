@@ -60,7 +60,7 @@ export default function LoginPage() {
         <div className="w-full max-w-md space-y-8">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Welcome back</h2>
-            <p className="mt-2 text-slate-500">
+            <p className="mt-2 text-slate-600">
               Sign in to your account to continue.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function LoginPage() {
                 <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Mail className="h-5 w-5 text-slate-500" />
+                    <Mail className="h-5 w-5 text-slate-600" />
                   </div>
                   <input
                     name="email"
@@ -95,7 +95,7 @@ export default function LoginPage() {
                 <label className="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Lock className="h-5 w-5 text-slate-500" />
+                    <Lock className="h-5 w-5 text-slate-600" />
                   </div>
                   <input
                     name="password"
@@ -118,7 +118,7 @@ export default function LoginPage() {
               {!isLoading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
             </button>
             
-            <p className="text-center text-xs text-slate-500 mt-6">
+            <p className="text-center text-xs text-slate-600 mt-6">
               Protected by NextAuth. Authorized personnel only.
             </p>
           </form>
@@ -127,6 +127,7 @@ export default function LoginPage() {
     </div>
   )
 }
+
 
 
 

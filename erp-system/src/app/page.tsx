@@ -80,7 +80,7 @@ export default async function DashboardPage() {
             <span className="text-sm font-bold tracking-wider uppercase">Live Overview</span>
           </div>
           <h1 className="text-4xl font-black text-slate-900 tracking-tight">Financial Command Center</h1>
-          <p className="text-slate-500 mt-2 text-lg">Real-time insights for Agape ERP operations.</p>
+          <p className="text-slate-600 mt-2 text-lg">Real-time insights for Agape ERP operations.</p>
         </div>
         <div className="flex gap-3">
           <Link href="/articles" className="px-5 py-2.5 bg-[#18181b] border border-slate-200 text-slate-600 rounded-none font-medium hover:bg-white/5 transition shadow-sm">
@@ -119,7 +119,7 @@ export default async function DashboardPage() {
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-white/[0.02] rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-500 font-medium tracking-wide">Liquid Assets</h2>
+              <h2 className="text-slate-600 font-medium tracking-wide">Liquid Assets</h2>
               <div className="p-2 bg-white/5 text-slate-600 rounded-none">
                 <Wallet className="w-5 h-5" />
               </div>
@@ -127,7 +127,7 @@ export default async function DashboardPage() {
             <p className="text-3xl font-black text-slate-900 mb-1">
               €{totalAssets.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </p>
-            <p className="text-slate-500 text-sm mt-3">Total cash on hand</p>
+            <p className="text-slate-600 text-sm mt-3">Total cash on hand</p>
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export default async function DashboardPage() {
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/5 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-500 font-medium tracking-wide">Gross Revenue</h2>
+              <h2 className="text-slate-600 font-medium tracking-wide">Gross Revenue</h2>
               <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-none">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
@@ -144,7 +144,7 @@ export default async function DashboardPage() {
             <p className="text-3xl font-black text-slate-900 mb-1">
               €{totalRevenues.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </p>
-            <p className="text-slate-500 text-sm mt-3">YTD Income</p>
+            <p className="text-slate-600 text-sm mt-3">YTD Income</p>
           </div>
         </div>
 
@@ -153,7 +153,7 @@ export default async function DashboardPage() {
           <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-500/5 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out z-0"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-slate-500 font-medium tracking-wide">Active Missions</h2>
+              <h2 className="text-slate-600 font-medium tracking-wide">Active Missions</h2>
               <div className="p-2 bg-blue-500/10 text-blue-400 rounded-none">
                 <Users className="w-5 h-5" />
               </div>
@@ -161,7 +161,7 @@ export default async function DashboardPage() {
             <p className="text-3xl font-black text-slate-900 mb-1">
               {projects.length}
             </p>
-            <p className="text-slate-500 text-sm mt-3">Ongoing charitable projects</p>
+            <p className="text-slate-600 text-sm mt-3">Ongoing charitable projects</p>
           </div>
         </div>
 
@@ -175,7 +175,7 @@ export default async function DashboardPage() {
         <div className="px-8 py-6 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div>
             <h2 className="text-xl font-bold text-slate-900">Recent Transactions</h2>
-            <p className="text-sm text-slate-500 mt-1">Latest double-entry ledger activity.</p>
+            <p className="text-sm text-slate-600 mt-1">Latest double-entry ledger activity.</p>
           </div>
           <Link href="/articles" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm flex items-center gap-1 bg-indigo-500/10 px-4 py-2 rounded-none transition-colors">
             View Full Ledger <ArrowUpRight className="w-4 h-4" />
@@ -185,17 +185,17 @@ export default async function DashboardPage() {
           <table className="min-w-full divide-y divide-white/[0.05]">
             <thead className="bg-slate-50/50">
               <tr>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Description</th>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Debits (In)</th>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Credits (Out)</th>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Status</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Date</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Description</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Debits (In)</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Credits (Out)</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Status</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/[0.05]">
               {recentArticles.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-8 py-12 text-center text-slate-500">
+                  <td colSpan={5} className="px-8 py-12 text-center text-slate-600">
                     No transactions found.
                   </td>
                 </tr>
@@ -207,7 +207,7 @@ export default async function DashboardPage() {
 
                   return (
                     <tr key={article.id} className="hover:bg-white/[0.04] hover:scale-[1.01] hover:shadow-lg transition-colors group">
-                      <td className="px-8 py-5 whitespace-nowrap text-sm text-slate-500 font-medium">
+                      <td className="px-8 py-5 whitespace-nowrap text-sm text-slate-600 font-medium">
                         {new Date(article.date).toLocaleDateString()}
                       </td>
                       <td className="px-8 py-5 text-sm text-slate-200 font-medium">
@@ -238,6 +238,7 @@ export default async function DashboardPage() {
     </div>
   );
 }
+
 
 
 

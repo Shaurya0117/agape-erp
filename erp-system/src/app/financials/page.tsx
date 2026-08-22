@@ -61,7 +61,7 @@ export default async function FinancialsPage() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Financial Statements</h1>
-          <p className="text-slate-500 mt-2">Real-time Balance Sheet and Income Statement generated from ledger entries.</p>
+          <p className="text-slate-600 mt-2">Real-time Balance Sheet and Income Statement generated from ledger entries.</p>
         </div>
         <PdfExportButton 
           title="Master Financial Statement (Trial Balance)" 
@@ -74,7 +74,7 @@ export default async function FinancialsPage() {
       {/* KPI Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-none shadow-sm border border-slate-200 flex flex-col gap-2">
-          <div className="flex items-center gap-3 text-slate-500">
+          <div className="flex items-center gap-3 text-slate-600">
             <Landmark className="w-5 h-5" />
             <h2 className="text-sm font-semibold uppercase tracking-wider">Total Assets</h2>
           </div>
@@ -82,7 +82,7 @@ export default async function FinancialsPage() {
         </div>
 
         <div className="bg-white p-6 rounded-none shadow-sm border border-slate-200 flex flex-col gap-2">
-          <div className="flex items-center gap-3 text-slate-500">
+          <div className="flex items-center gap-3 text-slate-600">
             <Calculator className="w-5 h-5" />
             <h2 className="text-sm font-semibold uppercase tracking-wider">Liabilities</h2>
           </div>
@@ -150,8 +150,8 @@ export default async function FinancialsPage() {
               <span>€{totalEquity.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
             </div>
             <div className="flex justify-between items-center text-slate-700 border-b border-slate-100 pb-4">
-              <span className="text-sm italic text-slate-500">+ Retained Earnings (Net Income)</span>
-              <span className="text-sm italic text-slate-500">€{netIncome.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+              <span className="text-sm italic text-slate-600">+ Retained Earnings (Net Income)</span>
+              <span className="text-sm italic text-slate-600">€{netIncome.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
             </div>
             <div className="flex justify-between items-center text-lg pt-2">
               <span className="font-bold text-slate-900">Total L & E</span>
@@ -173,6 +173,7 @@ export default async function FinancialsPage() {
     </div>
   );
 }
+
 
 
 

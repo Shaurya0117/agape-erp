@@ -12,7 +12,7 @@ export default async function LogisticsPage() {
     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div>
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Logistics & Shipping</h1>
-        <p className="text-slate-500 mt-2">Manage relief containers and tracking identifiers.</p>
+        <p className="text-slate-600 mt-2">Manage relief containers and tracking identifiers.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -30,7 +30,7 @@ export default async function LogisticsPage() {
                 <label className="text-sm font-semibold text-slate-700">Container Content / Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Box className="h-5 w-5 text-slate-500" />
+                    <Box className="h-5 w-5 text-slate-600" />
                   </div>
                   <input type="text" name="title" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" placeholder="e.g. Medical Supplies" />
                 </div>
@@ -40,7 +40,7 @@ export default async function LogisticsPage() {
                 <label className="text-sm font-semibold text-slate-700">Tracking Identifier</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Tag className="h-5 w-5 text-slate-500" />
+                    <Tag className="h-5 w-5 text-slate-600" />
                   </div>
                   <input type="text" name="identifier" required className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" placeholder="MSCU-1234567" />
                 </div>
@@ -50,7 +50,7 @@ export default async function LogisticsPage() {
                 <label className="text-sm font-semibold text-slate-700">Departure Date</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Calendar className="h-5 w-5 text-slate-500" />
+                    <Calendar className="h-5 w-5 text-slate-600" />
                   </div>
                   <input type="date" name="departureDate" className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 rounded-none focus:ring-2 focus:ring-indigo-600 sm:text-sm bg-slate-50" />
                 </div>
@@ -68,9 +68,9 @@ export default async function LogisticsPage() {
               <table className="min-w-full divide-y divide-slate-100">
                 <thead className="bg-slate-50/80">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Container</th>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Tracking ID</th>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase">Departure Date</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase">Container</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase">Tracking ID</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase">Departure Date</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 bg-white">
@@ -86,7 +86,7 @@ export default async function LogisticsPage() {
                       <tr key={c.id} className="hover:bg-slate-50">
                         <td className="px-6 py-4 whitespace-nowrap font-medium text-slate-900">{c.title}</td>
                         <td className="px-6 py-4 whitespace-nowrap"><span className="bg-indigo-50 text-indigo-700 font-mono px-2 py-1 rounded text-sm font-bold border border-indigo-100">{c.identifier}</span></td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
                           {c.departureDate ? new Date(c.departureDate).toLocaleDateString() : 'Awaiting'}
                         </td>
                       </tr>
@@ -102,6 +102,7 @@ export default async function LogisticsPage() {
     </div>
   );
 }
+
 
 
 

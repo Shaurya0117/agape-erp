@@ -27,7 +27,7 @@ export default async function ProjectsPage({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Project Management</h1>
-          <p className="text-slate-500 mt-2">Create and manage initiatives, assign budgets, and track statuses.</p>
+          <p className="text-slate-600 mt-2">Create and manage initiatives, assign budgets, and track statuses.</p>
         </div>
         <SearchInput placeholder="Search projects..." />
       </div>
@@ -45,7 +45,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Project Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Briefcase className="h-5 w-5 text-slate-500" />
+                    <Briefcase className="h-5 w-5 text-slate-600" />
                   </div>
                   <input 
                     type="text" 
@@ -61,7 +61,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Target Budget (€)</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Euro className="h-5 w-5 text-slate-500" />
+                    <Euro className="h-5 w-5 text-slate-600" />
                   </div>
                   <input 
                     type="number"
@@ -77,7 +77,7 @@ export default async function ProjectsPage({
                 <label className="text-sm font-semibold text-slate-700">Work Stage</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Target className="h-5 w-5 text-slate-500" />
+                    <Target className="h-5 w-5 text-slate-600" />
                   </div>
                   <select 
                     name="workStage" 
@@ -128,16 +128,16 @@ export default async function ProjectsPage({
               <table className="min-w-full divide-y divide-slate-100">
                 <thead className="bg-slate-50/80">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Project Info</th>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Stage</th>
-                    <th className="px-6 py-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">Budget</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Project Info</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Stage</th>
+                    <th className="px-6 py-4 text-right text-xs font-bold text-slate-600 uppercase tracking-wider">Budget</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 bg-white">
                   {projects.length === 0 ? (
                     <tr>
                       <td colSpan={3} className="px-6 py-16 text-center">
-                        <div className="flex flex-col items-center justify-center text-slate-500">
+                        <div className="flex flex-col items-center justify-center text-slate-600">
                           <Briefcase className="w-12 h-12 mb-3 text-slate-200" />
                           <p className="text-base font-medium text-slate-600">No projects found</p>
                           <p className="text-sm">Create your first initiative.</p>
@@ -154,7 +154,7 @@ export default async function ProjectsPage({
                             </div>
                             <div>
                               <div className="text-sm font-semibold text-slate-900">{project.title}</div>
-                              <div className="text-xs text-slate-500">
+                              <div className="text-xs text-slate-600">
                                 {project.code ? `${project.code} • ` : ''}
                                 {project.startDate ? new Date(project.startDate).toLocaleDateString() : 'No start date'}
                               </div>
@@ -187,6 +187,7 @@ export default async function ProjectsPage({
     </div>
   );
 }
+
 
 
 

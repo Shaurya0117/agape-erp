@@ -22,3 +22,4 @@ export default function LanguageToggle({ currentLocale }: { currentLocale: strin
     </button>
   );
 }
+

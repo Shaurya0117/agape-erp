@@ -20,7 +20,7 @@ export default async function DonationsPage() {
         <h1 className="text-3xl font-bold text-gray-900">Donations Tracker</h1>
         <a 
           href="/api/export/donations" 
-          className="bg-slate-800 text-slate-900 px-4 py-2 rounded shadow hover:bg-slate-700 transition"
+          className="bg-slate-900 text-white px-4 py-2 rounded shadow hover:bg-slate-700 transition"
         >
           Export to CSV
         </a>
@@ -131,6 +131,7 @@ export default async function DonationsPage() {
     </div>
   );
 }
+
 
 
 

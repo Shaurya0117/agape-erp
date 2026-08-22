@@ -14,7 +14,7 @@ export default async function ReportsPage() {
     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div>
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Program Reports</h1>
-        <p className="text-slate-500 mt-2">Track funding, budgets, and remittance execution for all initiatives.</p>
+        <p className="text-slate-600 mt-2">Track funding, budgets, and remittance execution for all initiatives.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-6">
@@ -23,7 +23,7 @@ export default async function ReportsPage() {
           const budget = project.budget || 0;
           const percentage = budget > 0 ? Math.min((totalSpent / budget) * 100, 100) : 0;
           
-          let statusColor = "text-slate-500";
+          let statusColor = "text-slate-600";
           let bgColor = "bg-slate-100";
           let barColor = "bg-slate-500";
           
@@ -49,10 +49,10 @@ export default async function ReportsPage() {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">{project.title}</h3>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className="text-sm font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                    <span className="text-sm font-medium text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
                       {project.workStage || "PLANNING"}
                     </span>
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-slate-600">
                       Code: {project.code || "N/A"}
                     </span>
                   </div>
@@ -70,15 +70,15 @@ export default async function ReportsPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 mt-6">
                 <div>
-                  <p className="text-sm font-semibold text-slate-500 uppercase">Target Budget</p>
+                  <p className="text-sm font-semibold text-slate-600 uppercase">Target Budget</p>
                   <p className="text-xl font-bold text-slate-900">€{budget.toLocaleString()}</p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-500 uppercase">Total Spent (Remittances)</p>
+                  <p className="text-sm font-semibold text-slate-600 uppercase">Total Spent (Remittances)</p>
                   <p className="text-xl font-bold text-slate-900">€{totalSpent.toLocaleString()}</p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-500 uppercase">Remaining</p>
+                  <p className="text-sm font-semibold text-slate-600 uppercase">Remaining</p>
                   <p className={`text-xl font-bold ${budget > 0 && budget - totalSpent < 0 ? 'text-red-600' : 'text-emerald-600'}`}>
                     €{budget > 0 ? (budget - totalSpent).toLocaleString() : '---'}
                   </p>
@@ -105,7 +105,7 @@ export default async function ReportsPage() {
         })}
         
         {projects.length === 0 && (
-          <div className="bg-white p-12 rounded-none shadow-sm border border-slate-200 text-center text-slate-500">
+          <div className="bg-white p-12 rounded-none shadow-sm border border-slate-200 text-center text-slate-600">
             <PieChart className="w-12 h-12 mx-auto mb-4 text-slate-600" />
             <p className="text-lg font-medium text-slate-900">No active projects</p>
             <p>Create a project to see financial reports here.</p>
@@ -115,6 +115,7 @@ export default async function ReportsPage() {
     </div>
   );
 }
+
 
 
 

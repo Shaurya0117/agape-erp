@@ -28,7 +28,7 @@ export default async function InventoryPage({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Warehouse Inventory</h1>
-          <p className="text-slate-500 mt-2">Manage stock levels, SKUs, and physical storage locations.</p>
+          <p className="text-slate-600 mt-2">Manage stock levels, SKUs, and physical storage locations.</p>
         </div>
         <SearchInput placeholder="Search by name or SKU..." />
       </div>
@@ -96,7 +96,7 @@ export default async function InventoryPage({
                     {item.name}
                     {item.quantity < 10 && <span className="px-2 py-0.5 bg-red-500/20 text-red-400 text-[10px] uppercase font-bold tracking-wider">Low Stock</span>}
                   </h3>
-                  <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium">
+                  <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-slate-600 font-medium">
                     <span className="flex items-center gap-1"><Tag className="w-3.5 h-3.5" /> {item.sku}</span>
                     <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5" /> {item.location || 'Unassigned'}</span>
                     <span className="px-2 py-0.5 bg-slate-100 border border-slate-200 text-slate-600">{item.category}</span>
@@ -106,7 +106,7 @@ export default async function InventoryPage({
               
               <div className="flex items-center justify-between sm:justify-end gap-6 bg-slate-50 p-3 sm:bg-transparent sm:p-0 border border-slate-200 sm:border-none">
                 <div className="text-right hidden sm:block">
-                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Stock Level</p>
+                  <p className="text-xs text-slate-600 font-bold uppercase tracking-wider mb-1">Stock Level</p>
                   <p className="text-sm font-medium text-slate-600">{item.unit}</p>
                 </div>
                 <StockAdjuster itemId={item.id} initialQuantity={item.quantity} />
@@ -117,7 +117,7 @@ export default async function InventoryPage({
             <div className="text-center p-12 bg-white border border-slate-200 rounded-none">
               <Package className="mx-auto h-12 w-12 text-slate-600 mb-4" />
               <h3 className="text-lg font-bold text-slate-900 mb-2">No items found</h3>
-              <p className="text-slate-500 text-sm">Add your first item to the inventory using the form.</p>
+              <p className="text-slate-600 text-sm">Add your first item to the inventory using the form.</p>
             </div>
           )}
         </div>
@@ -126,3 +126,4 @@ export default async function InventoryPage({
     </div>
   )
 }
+

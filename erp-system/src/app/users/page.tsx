@@ -22,7 +22,7 @@ export default async function UsersPage() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Access Control</h1>
-          <p className="text-slate-500 mt-2">Manage staff accounts and module-specific permissions.</p>
+          <p className="text-slate-600 mt-2">Manage staff accounts and module-specific permissions.</p>
         </div>
       </div>
 
@@ -36,12 +36,12 @@ export default async function UsersPage() {
           <table className="min-w-full divide-y divide-white/[0.05]">
             <thead className="bg-slate-50/50">
               <tr>
-                <th className="px-8 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">User</th>
-                <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Super Admin</th>
-                <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Financials</th>
-                <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Projects</th>
-                <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Logistics</th>
-                <th className="px-8 py-4 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Users</th>
+                <th className="px-8 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">User</th>
+                <th className="px-8 py-4 text-center text-xs font-bold text-slate-600 uppercase tracking-wider">Super Admin</th>
+                <th className="px-8 py-4 text-center text-xs font-bold text-slate-600 uppercase tracking-wider">Financials</th>
+                <th className="px-8 py-4 text-center text-xs font-bold text-slate-600 uppercase tracking-wider">Projects</th>
+                <th className="px-8 py-4 text-center text-xs font-bold text-slate-600 uppercase tracking-wider">Logistics</th>
+                <th className="px-8 py-4 text-center text-xs font-bold text-slate-600 uppercase tracking-wider">Users</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/[0.05]">
@@ -49,7 +49,7 @@ export default async function UsersPage() {
                 <tr key={user.id} className="hover:bg-white/[0.02] transition-colors">
                   <td className="px-8 py-5 whitespace-nowrap">
                     <div className="text-sm font-bold text-slate-900">{user.name || "Unknown"}</div>
-                    <div className="text-sm text-slate-500">{user.email}</div>
+                    <div className="text-sm text-slate-600">{user.email}</div>
                   </td>
                   <td className="px-8 py-5 whitespace-nowrap text-center">
                     <PermissionToggle userId={user.id} field="isSuperAdmin" initialValue={user.isSuperAdmin} />
@@ -70,7 +70,7 @@ export default async function UsersPage() {
               ))}
               {users.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-8 py-12 text-center text-slate-500">
+                  <td colSpan={6} className="px-8 py-12 text-center text-slate-600">
                     No registered users found in the database.
                   </td>
                 </tr>
@@ -82,5 +82,6 @@ export default async function UsersPage() {
     </div>
   )
 }
+
 
 

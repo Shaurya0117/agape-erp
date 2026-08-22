@@ -34,7 +34,7 @@ export default async function ArticlesPage({
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Transactions</h1>
-          <p className="text-slate-500 mt-2">Record complex double-entry articles.</p>
+          <p className="text-slate-600 mt-2">Record complex double-entry articles.</p>
         </div>
         
         <div className="flex items-center gap-4">
@@ -59,7 +59,7 @@ export default async function ArticlesPage({
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold text-slate-900">Recent Articles</h2>
-            <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">{articles.length} total</span>
+            <span className="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">{articles.length} total</span>
           </div>
           
           {articles.map((article) => {
@@ -74,7 +74,7 @@ export default async function ArticlesPage({
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{article.description}</h3>
-                      <p className="text-xs text-slate-500 flex items-center gap-2 mt-0.5">
+                      <p className="text-xs text-slate-600 flex items-center gap-2 mt-0.5">
                         <Calendar className="w-3 h-3" />
                         {new Date(article.date).toLocaleDateString()}
                         {article.referenceNumber && <span>• Ref: {article.referenceNumber}</span>}
@@ -84,7 +84,7 @@ export default async function ArticlesPage({
                   </div>
                   <div className="text-right">
                     <p className="font-mono font-bold text-slate-900 text-lg">€{totalDebit.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
-                    <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Balanced</p>
+                    <p className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Balanced</p>
                   </div>
                 </div>
 
@@ -92,7 +92,7 @@ export default async function ArticlesPage({
                 <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white">
                   {/* Debits */}
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 border-b border-slate-100 pb-1">Debits</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 border-b border-slate-100 pb-1">Debits</h4>
                     <div className="space-y-1">
                       {article.debits.map(d => (
                         <div key={d.id} className="flex justify-between items-center text-sm">
@@ -105,7 +105,7 @@ export default async function ArticlesPage({
                   
                   {/* Credits */}
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 border-b border-slate-100 pb-1">Credits</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 border-b border-slate-100 pb-1">Credits</h4>
                     <div className="space-y-1">
                       {article.credits.map(c => (
                         <div key={c.id} className="flex justify-between items-center text-sm">
@@ -123,7 +123,7 @@ export default async function ArticlesPage({
             <div className="text-center p-12 border-2 border-dashed border-slate-200 rounded-none bg-slate-50">
               <Banknote className="mx-auto h-10 w-10 text-slate-300 mb-3" />
               <h3 className="text-sm font-semibold text-slate-900 mb-1">No transactions found</h3>
-              <p className="text-sm text-slate-500">Record a new journal entry using the form.</p>
+              <p className="text-sm text-slate-600">Record a new journal entry using the form.</p>
             </div>
           )}
         </div>
@@ -131,3 +131,4 @@ export default async function ArticlesPage({
     </div>
   )
 }
+

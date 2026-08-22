@@ -36,3 +36,4 @@ export default function StockAdjuster({ itemId, initialQuantity }: { itemId: str
     </div>
   );
 }
+

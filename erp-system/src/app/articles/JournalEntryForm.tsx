@@ -113,7 +113,7 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
                 </select>
                 <input type="number" step="0.01" value={d.amount} onChange={e => updateDebit(d.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono" />
                 {debits.length > 1 && (
-                  <button type="button" onClick={() => removeDebit(d.id)} className="p-2 text-slate-400 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
+                  <button type="button" onClick={() => removeDebit(d.id)} className="p-2 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
                 )}
               </div>
             ))}
@@ -135,7 +135,7 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
                 </select>
                 <input type="number" step="0.01" value={c.amount} onChange={e => updateCredit(c.id, 'amount', e.target.value)} placeholder="0.00" className="w-32 px-3 py-2 border border-slate-200 focus:ring-2 focus:ring-indigo-500 text-right font-mono" />
                 {credits.length > 1 && (
-                  <button type="button" onClick={() => removeCredit(c.id)} className="p-2 text-slate-400 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
+                  <button type="button" onClick={() => removeCredit(c.id)} className="p-2 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4"/></button>
                 )}
               </div>
             ))}
@@ -145,11 +145,11 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
         {/* Totals */}
         <div className="pt-4 border-t border-slate-200 flex justify-end gap-8">
           <div className="text-right">
-            <p className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-1">Total Debits</p>
+            <p className="text-xs text-slate-600 uppercase tracking-wider font-bold mb-1">Total Debits</p>
             <p className="font-mono font-bold text-indigo-700">€{totalDebits.toFixed(2)}</p>
           </div>
           <div className="text-right">
-            <p className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-1">Total Credits</p>
+            <p className="text-xs text-slate-600 uppercase tracking-wider font-bold mb-1">Total Credits</p>
             <p className="font-mono font-bold text-amber-700">€{totalCredits.toFixed(2)}</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
           className={`w-full flex justify-center items-center gap-2 py-3 px-4 rounded-none shadow-sm text-sm font-bold transition-colors ${
             isBalanced 
               ? 'bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer' 
-              : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+              : 'bg-slate-200 text-slate-500 cursor-not-allowed'
           }`}
         >
           <Save className="w-4 h-4" />
@@ -170,3 +170,4 @@ export default function JournalEntryForm({ accounts }: { accounts: Account[] }) 
     </div>
   );
 }
+

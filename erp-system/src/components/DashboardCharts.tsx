@@ -18,7 +18,7 @@ export function DashboardCharts({ monthlyData, projectData }: ChartDataProps) {
       <div className="bg-white p-6 rounded-none shadow-2xl border border-slate-200">
         <div className="mb-6">
           <h3 className="text-lg font-bold text-slate-900">Cashflow Trend</h3>
-          <p className="text-sm text-slate-500">Monthly revenues vs expenses overview.</p>
+          <p className="text-sm text-slate-600">Monthly revenues vs expenses overview.</p>
         </div>
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
@@ -52,7 +52,7 @@ export function DashboardCharts({ monthlyData, projectData }: ChartDataProps) {
       <div className="bg-white p-6 rounded-none shadow-2xl border border-slate-200">
         <div className="mb-6">
           <h3 className="text-lg font-bold text-slate-900">Project Budgets</h3>
-          <p className="text-sm text-slate-500">Target budgets vs actual expenditures.</p>
+          <p className="text-sm text-slate-600">Target budgets vs actual expenditures.</p>
         </div>
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
@@ -76,4 +76,5 @@ export function DashboardCharts({ monthlyData, projectData }: ChartDataProps) {
     </div>
   )
 }
+
 

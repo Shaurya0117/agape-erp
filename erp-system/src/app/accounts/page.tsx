@@ -12,7 +12,7 @@ export default async function AccountsPage() {
     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div>
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Chart of Accounts</h1>
-        <p className="text-slate-500 mt-2">Manage your financial buckets, assets, and liabilities.</p>
+        <p className="text-slate-600 mt-2">Manage your financial buckets, assets, and liabilities.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -29,7 +29,7 @@ export default async function AccountsPage() {
                 <label className="text-sm font-semibold text-slate-700">Account Title</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Building2 className="h-5 w-5 text-slate-500" />
+                    <Building2 className="h-5 w-5 text-slate-600" />
                   </div>
                   <input 
                     type="text" 
@@ -45,7 +45,7 @@ export default async function AccountsPage() {
                 <label className="text-sm font-semibold text-slate-700">Category Type</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Wallet className="h-5 w-5 text-slate-500" />
+                    <Wallet className="h-5 w-5 text-slate-600" />
                   </div>
                   <select 
                     name="accountType" 
@@ -63,10 +63,10 @@ export default async function AccountsPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700">GAS Code <span className="text-slate-500 font-normal">(Optional)</span></label>
+                <label className="text-sm font-semibold text-slate-700">GAS Code <span className="text-slate-600 font-normal">(Optional)</span></label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Hash className="h-4 w-4 text-slate-500" />
+                    <Hash className="h-4 w-4 text-slate-600" />
                   </div>
                   <input 
                     type="text" 
@@ -94,17 +94,17 @@ export default async function AccountsPage() {
               <table className="min-w-full divide-y divide-slate-100">
                 <thead className="bg-slate-50/80">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Account Info</th>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Category</th>
-                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">GAS Code</th>
-                    <th className="px-6 py-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">Actions</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Account Info</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">Category</th>
+                    <th className="px-6 py-4 text-left text-xs font-bold text-slate-600 uppercase tracking-wider">GAS Code</th>
+                    <th className="px-6 py-4 text-right text-xs font-bold text-slate-600 uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 bg-white">
                   {accounts.length === 0 ? (
                     <tr>
                       <td colSpan={4} className="px-6 py-16 text-center">
-                        <div className="flex flex-col items-center justify-center text-slate-500">
+                        <div className="flex flex-col items-center justify-center text-slate-600">
                           <Building2 className="w-12 h-12 mb-3 text-slate-200" />
                           <p className="text-base font-medium text-slate-600">No accounts found</p>
                           <p className="text-sm">Create your first account using the form.</p>
@@ -116,7 +116,7 @@ export default async function AccountsPage() {
                       <tr key={account.id} className="hover:bg-slate-50/80 transition-colors group">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-none bg-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
+                            <div className="w-8 h-8 rounded-none bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
                               <Wallet className="w-4 h-4" />
                             </div>
                             <span className="text-sm font-semibold text-slate-900">{account.title}</span>
@@ -128,14 +128,14 @@ export default async function AccountsPage() {
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className="text-sm text-slate-500 font-mono bg-slate-100 px-2 py-1 rounded">
+                          <span className="text-sm text-slate-600 font-mono bg-slate-100 px-2 py-1 rounded">
                             {account.gasCode || '---'}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-right">
                           <form action={deleteAccount as any}>
                             <input type="hidden" name="id" value={account.id} />
-                            <button type="submit" className="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-none transition-colors" title="Delete Account">
+                            <button type="submit" className="p-2 text-slate-600 hover:text-red-600 hover:bg-red-50 rounded-none transition-colors" title="Delete Account">
                               <Trash2 className="w-4 h-4" />
                             </button>
                           </form>
@@ -152,6 +152,7 @@ export default async function AccountsPage() {
     </div>
   );
 }
+
 
 
 

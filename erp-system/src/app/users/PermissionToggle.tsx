@@ -37,3 +37,4 @@ export default function PermissionToggle({ userId, field, initialValue, disabled
     </button>
   );
 }
+

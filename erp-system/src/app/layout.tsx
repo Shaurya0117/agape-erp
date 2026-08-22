@@ -40,7 +40,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="">
-      <body className={`${inter.className} bg-slate-50 text-slate-600 flex h-screen overflow-hidden selection:bg-amber-500/30`}>
+      <body className={`${inter.className} bg-slate-50 text-slate-900 flex h-screen overflow-hidden selection:bg-amber-500/30`}>
         {/* Sidebar Navigation */}
         <aside className="w-72 bg-slate-50 flex flex-col hidden md:flex border-r border-slate-200 z-20 relative">
           
@@ -56,71 +56,71 @@ export default async function RootLayout({
           </div>
           
           <nav className="flex-1 px-3 py-6 space-y-1 overflow-y-auto custom-scrollbar">
-            <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-4">Overview</p>
-            <Link href="/" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <LayoutDashboard className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <p className="px-4 text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 mt-4">Overview</p>
+            <Link href="/" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <LayoutDashboard className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.dashboard}</span>
             </Link>
-            <Link href="/reports" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <TrendingUp className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/reports" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <TrendingUp className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.reports}</span>
             </Link>
 
-            <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">Accounting</p>
-            <Link href="/financials" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <FileText className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <p className="px-4 text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 mt-6">Accounting</p>
+            <Link href="/financials" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <FileText className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.financials}</span>
             </Link>
-            <Link href="/accounts" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Wallet className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/accounts" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Wallet className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.accounts}</span>
             </Link>
-            <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <ReceiptText className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <ReceiptText className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.transactions}</span>
             </Link>
 
-            <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">CRM & Operations</p>
-            <Link href="/contributors" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Users className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <p className="px-4 text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 mt-6">CRM & Operations</p>
+            <Link href="/contributors" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Users className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.contributors}</span>
             </Link>
-            <Link href="/donations" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <HeartHandshake className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/donations" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <HeartHandshake className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.donations}</span>
             </Link>
-            <Link href="/projects" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Briefcase className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/projects" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Briefcase className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.projects}</span>
             </Link>
-            <Link href="/baptisms" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Baby className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/baptisms" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Baby className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.baptisms}</span>
             </Link>
-            <Link href="/logistics" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Ship className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/logistics" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Ship className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.logistics}</span>
             </Link>
-            <Link href="/inventory" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Package className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+            <Link href="/inventory" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Package className="w-5 h-5 text-slate-600 group-hover:text-emerald-400 transition-colors" />
               <span className="font-medium">{dict.inventory}</span>
             </Link>
             
-            <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">{dict.administration}</p>
-              <Link href="/users" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-                <ShieldAlert className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <p className="px-4 text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 mt-6">{dict.administration}</p>
+              <Link href="/users" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+                <ShieldAlert className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
                 <span className="font-medium">{dict.accessRoles}</span>
               </Link>
-            <Link href="/admin" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Building2 className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/admin" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Building2 className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.adminAssets}</span>
             </Link>
-            <Link href="/documents" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <FileBadge className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/documents" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <FileBadge className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.documents}</span>
             </Link>
-            <Link href="/remittances" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md">
-              <Send className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+            <Link href="/remittances" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+              <Send className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.remittances}</span>
             </Link>
 
@@ -138,7 +138,7 @@ export default async function RootLayout({
           {/* Header */}
           <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 h-16 flex items-center px-8 sticky top-0 z-10 shadow-sm">
             <div className="flex-1">
-              <div className="text-sm font-medium text-slate-500">Welcome back,</div>
+              <div className="text-sm font-medium text-slate-600">Welcome back,</div>
               <div className="text-lg font-bold text-slate-800 leading-tight">Admin User</div>
             </div>
             <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center border-2 border-indigo-200">
@@ -157,6 +157,9 @@ export default async function RootLayout({
     </html>
   );
 }
+
+
+
 
 
 
