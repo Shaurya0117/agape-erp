@@ -6,12 +6,10 @@ import { revalidatePath } from "next/cache"
 export async function createArticle(payload: {
   description: string;
   date: string;
-  referenceNumber?: string;
-  vendorName?: string;
-  debits: { accountId: string; amount: number }[];
-  credits: { accountId: string; amount: number }[];
+  debits: { accountId: string; amount: number; reference?: string; consignee?: string }[];
+  credits: { accountId: string; amount: number; reference?: string; consignee?: string }[];
 }) {
-  const { description, date, referenceNumber, vendorName, debits, credits } = payload;
+  const { description, date, debits, credits } = payload;
 
   if (!description || !date) throw new Error("Missing fields");
 
@@ -19,13 +17,21 @@ export async function createArticle(payload: {
     data: {
       description,
       date: new Date(date),
-      referenceNumber: referenceNumber || null,
-      vendorName: vendorName || null,
       debits: {
-        create: debits.map(d => ({ accountId: d.accountId, amount: d.amount }))
+        create: debits.map(d => ({ 
+          accountId: d.accountId, 
+          amount: d.amount,
+          reference: d.reference || null,
+          consignee: d.consignee || null
+        }))
       },
       credits: {
-        create: credits.map(c => ({ accountId: c.accountId, amount: c.amount }))
+        create: credits.map(c => ({ 
+          accountId: c.accountId, 
+          amount: c.amount,
+          reference: c.reference || null,
+          consignee: c.consignee || null
+        }))
       }
     }
   });

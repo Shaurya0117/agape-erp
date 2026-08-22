@@ -41,7 +41,7 @@ export default async function ArticlesPage({
           <SearchInput placeholder="Search transactions..." />
           <a 
             href="/api/export/articles" 
-            className="bg-white border border-slate-200 text-slate-700 px-4 py-2.5 rounded-none shadow-sm hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium flex items-center gap-2"
+            className="bg-slate-900 text-white px-4 py-2.5 shadow hover:bg-slate-700 transition flex items-center gap-2 font-bold"
           >
             <Download className="w-4 h-4" />
             Export to CSV
@@ -49,55 +49,62 @@ export default async function ArticlesPage({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12">
-        {/* Left Column: Premium Form */}
-        <div className="lg:col-span-1">
+      <div className="flex flex-col gap-12 pb-12">
+        {/* Top: Premium Form */}
+        <div className="w-full">
           <JournalEntryForm accounts={accounts} />
         </div>
 
-        {/* Right Column: History List */}
-        <div className="lg:col-span-2 space-y-4">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-bold text-slate-900">Recent Articles</h2>
-            <span className="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">{articles.length} total</span>
+        {/* Bottom: History List */}
+        <div className="w-full space-y-4">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold text-slate-900">Recent Articles</h2>
+            <span className="text-sm font-bold text-slate-600 bg-slate-200 px-3 py-1">{articles.length} total</span>
           </div>
           
           {articles.map((article) => {
             const totalDebit = article.debits.reduce((sum, d) => sum + d.amount, 0);
             
             return (
-              <div key={article.id} className="bg-white rounded-none shadow-sm border border-slate-200 overflow-hidden hover:border-indigo-300 transition-all group">
-                <div className="px-5 py-4 border-b border-slate-50 flex items-center justify-between bg-slate-50">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-indigo-50 text-indigo-600 rounded-none">
+              <div key={article.id} className="bg-white shadow-sm border border-slate-200 overflow-hidden hover:border-indigo-400 transition-all group">
+                <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-100/50">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-indigo-100 text-indigo-700 rounded-sm">
                       <ReceiptText className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{article.description}</h3>
-                      <p className="text-xs text-slate-600 flex items-center gap-2 mt-0.5">
-                        <Calendar className="w-3 h-3" />
+                      <h3 className="font-bold text-slate-900 text-lg group-hover:text-indigo-700 transition-colors">{article.description}</h3>
+                      <p className="text-sm text-slate-600 flex items-center gap-2 mt-0.5 font-medium">
+                        <Calendar className="w-4 h-4" />
                         {new Date(article.date).toLocaleDateString()}
-                        {article.referenceNumber && <span>• Ref: {article.referenceNumber}</span>}
-                        {article.vendorName && <span>• Vendor: {article.vendorName}</span>}
                       </p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-mono font-bold text-slate-900 text-lg">€{totalDebit.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
-                    <p className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Balanced</p>
+                    <p className="font-mono font-bold text-slate-900 text-xl">€{totalDebit.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                    <p className="text-[10px] uppercase font-bold text-indigo-700 tracking-wider">Balanced</p>
                   </div>
                 </div>
 
                 {/* Split Details */}
-                <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white">
+                <div className="p-5 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
                   {/* Debits */}
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 border-b border-slate-100 pb-1">Debits</h4>
-                    <div className="space-y-1">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 border-b-2 border-indigo-100 pb-2">Debits</h4>
+                    <div className="space-y-3">
                       {article.debits.map(d => (
-                        <div key={d.id} className="flex justify-between items-center text-sm">
-                          <span className="text-slate-600">{d.account.title}</span>
-                          <span className="font-mono text-slate-900">€{d.amount.toFixed(2)}</span>
+                        <div key={d.id} className="text-sm">
+                          <div className="flex justify-between items-center font-medium">
+                            <span className="text-slate-800">{d.account.title}</span>
+                            <span className="font-mono font-bold text-slate-900">€{d.amount.toFixed(2)}</span>
+                          </div>
+                          {(d.consignee || d.reference) && (
+                            <div className="text-xs text-slate-500 mt-1 pl-2 border-l-2 border-slate-200">
+                              {d.consignee && <span className="font-bold">C:</span>} {d.consignee} 
+                              {d.consignee && d.reference && " | "}
+                              {d.reference && <span className="font-bold">R:</span>} {d.reference}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -105,12 +112,21 @@ export default async function ArticlesPage({
                   
                   {/* Credits */}
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 border-b border-slate-100 pb-1">Credits</h4>
-                    <div className="space-y-1">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 border-b-2 border-amber-100 pb-2">Credits</h4>
+                    <div className="space-y-3">
                       {article.credits.map(c => (
-                        <div key={c.id} className="flex justify-between items-center text-sm">
-                          <span className="text-slate-600">{c.account.title}</span>
-                          <span className="font-mono text-slate-900">€{c.amount.toFixed(2)}</span>
+                        <div key={c.id} className="text-sm">
+                          <div className="flex justify-between items-center font-medium">
+                            <span className="text-slate-800">{c.account.title}</span>
+                            <span className="font-mono font-bold text-slate-900">€{c.amount.toFixed(2)}</span>
+                          </div>
+                          {(c.consignee || c.reference) && (
+                            <div className="text-xs text-slate-500 mt-1 pl-2 border-l-2 border-slate-200">
+                              {c.consignee && <span className="font-bold">C:</span>} {c.consignee} 
+                              {c.consignee && c.reference && " | "}
+                              {c.reference && <span className="font-bold">R:</span>} {c.reference}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -120,10 +136,10 @@ export default async function ArticlesPage({
             )
           })}
           {articles.length === 0 && (
-            <div className="text-center p-12 border-2 border-dashed border-slate-200 rounded-none bg-slate-50">
-              <Banknote className="mx-auto h-10 w-10 text-slate-300 mb-3" />
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">No transactions found</h3>
-              <p className="text-sm text-slate-600">Record a new journal entry using the form.</p>
+            <div className="text-center p-12 border-2 border-dashed border-slate-200 bg-slate-50">
+              <Banknote className="mx-auto h-12 w-12 text-slate-400 mb-3" />
+              <h3 className="text-lg font-bold text-slate-900 mb-1">No transactions found</h3>
+              <p className="text-sm font-medium text-slate-600">Record a new journal entry using the form above.</p>
             </div>
           )}
         </div>
@@ -131,6 +147,3 @@ export default async function ArticlesPage({
     </div>
   )
 }
-
-
-

@@ -6,7 +6,8 @@ import { cookies } from "next/headers";
 import { dictionaries, Locale } from "@/lib/dictionaries";
 import LanguageToggle from "@/components/LanguageToggle";
 import { 
-  LayoutDashboard, 
+  BookOpen,
+    LayoutDashboard, 
   Wallet, 
   ReceiptText, 
   Users, 
@@ -75,7 +76,7 @@ export default async function RootLayout({
               <Wallet className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.accounts}</span>
             </Link>
-            <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+            <Link href="/ledgers" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 text-slate-700 hover:bg-slate-100 hover:translate-x-1 hover:text-indigo-700 group shadow-none hover:shadow-md">`r`n                <BookOpen className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />`r`n                <span className="font-medium">Subledgers</span>`r`n              </Link>`r`n              <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
               <ReceiptText className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.transactions}</span>
             </Link>
@@ -157,6 +158,7 @@ export default async function RootLayout({
     </html>
   );
 }
+
 
 
 

@@ -16,6 +16,8 @@ model Account {
   active          Boolean     @default(true)
   fullTitle       String?
   gasCode         String?     // Greek Accounting Standards
+  requiresReference Boolean @default(false)
+  requiresConsignee Boolean @default(false)
 
   debits          Debit[]
   credits         Credit[]
@@ -29,8 +31,8 @@ model Article {
   description     String
   date            DateTime
   balanceSheet    Boolean     @default(false)
-  referenceNumber String?
-  vendorName      String?
+  
+  
   
   debits          Debit[]
   credits         Credit[]
@@ -46,6 +48,8 @@ model Debit {
   amount          Float
   articleId       String
   accountId       String
+  reference       String?
+  consignee       String?
 
   article         Article     @relation(fields: [articleId], references: [id], onDelete: Cascade)
   account         Account     @relation(fields: [accountId], references: [id])
@@ -56,6 +60,8 @@ model Credit {
   amount          Float
   articleId       String
   accountId       String
+  reference       String?
+  consignee       String?
 
   article         Article     @relation(fields: [articleId], references: [id], onDelete: Cascade)
   account         Account     @relation(fields: [accountId], references: [id])
