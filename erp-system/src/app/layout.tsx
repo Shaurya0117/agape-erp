@@ -7,6 +7,7 @@ import { dictionaries, Locale } from "@/lib/dictionaries";
 import LanguageToggle from "@/components/LanguageToggle";
 import { 
   BookOpen,
+    Scale,
     LayoutDashboard, 
   Wallet, 
   ReceiptText, 
@@ -76,7 +77,7 @@ export default async function RootLayout({
               <Wallet className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.accounts}</span>
             </Link>
-            <Link href="/ledgers" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 text-slate-700 hover:bg-slate-100 hover:translate-x-1 hover:text-indigo-700 group shadow-none hover:shadow-md">                <BookOpen className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />                <span className="font-medium">Subledgers</span>              </Link>              <Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
+            <Link href="/ledgers" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 text-slate-700 hover:bg-slate-100 hover:translate-x-1 hover:text-indigo-700 group shadow-none hover:shadow-md">                <BookOpen className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />                <span className="font-medium">Subledgers</span>              </Link>              <Link href="/trial-balance" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 text-slate-700 hover:bg-slate-100 hover:translate-x-1 hover:text-indigo-700 group shadow-none hover:shadow-md"><Scale className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" /><span className="font-medium">Trial Balance</span></Link><Link href="/articles" className="flex items-center gap-3 py-2.5 px-4 rounded-none transition-all duration-200 hover:bg-slate-100 hover:translate-x-1 hover:text-slate-900 group shadow-none hover:shadow-md text-slate-700">
               <ReceiptText className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
               <span className="font-medium">{dict.transactions}</span>
             </Link>
@@ -158,6 +159,7 @@ export default async function RootLayout({
     </html>
   );
 }
+
 
 
 
